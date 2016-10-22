@@ -1,0 +1,93 @@
+.blog{
+	.site-main,
+	.hero-header{
+   	 	margin: 20px;
+	}
+	.site-main{
+		background: #fff;
+		position: relative;
+		border-top: 40px solid transparent;
+		border-image: url(dist/img/border.png) 60 repeat;
+	}
+	.hentry{
+		background: #fff;
+		position: relative;
+		border: 0;
+	}
+}
+.post-hero-heading{
+	position: absolute;
+    z-index: 999;
+    left: 60px;
+    top: 10%;
+}
+.post-hero {
+	display: none;
+	overflow: hidden;
+	width: 100%;
+	height: 450px;
+	padding: 0;
+	margin: 20px 0;
+	background: url(dist/img/layers/bg.jpg) no-repeat center bottom / cover;
+	li{
+		list-style: none;
+	}
+}
+.post-hero-mobile {
+	display: block;
+	background: url(dist/img/ships.jpg) no-repeat center bottom / cover;
+	height: 320px;
+}
+.post-thum{
+	img{
+		box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+		transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	}
+	&:hover{
+		img{
+			box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+		}
+	}
+}
+// create layers class with different positions
+@for $i from 1 through 8{
+	.layer-#{$i}{
+		left: 10% * $i !important;
+	}
+}
+.layer{
+	top: 42% !important;
+	position: absolute !important;
+}
+.layer-bg{
+	top: 0;
+}
+// Media Queries
+@media only screen and (min-width: 992px) {
+	.blog{
+		.widget-area{
+			max-width: 25%;
+			float: left;
+		}
+	}
+	.blog-content{
+		max-width: 75%;	
+		float: left;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	.post-hero {
+		display: block;
+	}
+	.post-hero-mobile {
+		display: none;
+	}
+}
+@media only screen and (min-width: 1600px) {
+	.post-hero {
+		height: 600px;
+	}
+	.layer{
+		top: 50% !important;
+	}
+}

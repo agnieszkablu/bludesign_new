@@ -1,0 +1,75 @@
+//Footer social media menu
+.site-footer__menu{
+	overflow: hidden;
+	clear: both;
+	display: inline-block;
+    margin: 0 auto;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+	.menu__item{
+		margin: 0 1em;
+	    float: left;
+	    a{
+			font-size: 1.7em;
+			color: $color__text-main;
+			transition: .3s all ease;
+			text-decoration: none;
+			&:hover,
+			&:focus,
+			&:active{
+				color: $color__link;
+				border-top: 1px solid $color__link;
+			}
+		}	
+	}
+}
+// Menu social menu - show icons instead of text
+.navbar-social.mobile{
+	padding: 0;
+	width: 100%;
+	list-style: none;
+	position: absolute;
+    bottom: 40px;
+    left: 15px;
+	.fb, .ln{
+		float: left;
+		display: block;
+		a{
+			position: relative;
+			color: transparent !important;
+			transition: .3s all;
+			&:before{
+				display: inline-block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 1;
+				color: $color__background-hr;
+			}
+			&:hover{
+				&:before{
+					color: $color__text-plain;
+				}
+			}
+		}
+		
+	}
+	.fb{
+		a{
+			&:before{
+				content: "\e05d";
+			}
+		}
+		
+	}
+	.ln{
+		a{
+			&:before{
+				left: 60px;
+				content: "\e062";
+			}	
+		}
+		
+	}
+}

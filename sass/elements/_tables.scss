@@ -1,0 +1,30 @@
+table{
+	margin: 0 0 1.5em;
+	text-align: left;
+	p{
+		padding-left: 0px ;
+	}	
+	td, th{
+		vertical-align: top;
+		padding: 0px 0px 15px 0px;
+	}
+	td{
+		padding-left: 10px;
+	}
+	th{
+		position: relative;
+		padding-right: 10px;
+		&:after{
+			position: absolute;
+			content: ':';
+			display: inline-block;
+			bottom: 0;
+			right: 0;
+			width: 2px;
+			height: 100%;
+		}
+	}
+	address{
+		margin: 0;
+	}
+}

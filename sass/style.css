@@ -1,0 +1,2565 @@
+/*!
+Theme Name: Bludesign
+Theme URI: http://bludesign.pl/
+Author: Agnieszka Gorz
+Author URI: http://bludesign.pl/
+Description: Wordpress theme developed by http://bludesign.pl/
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: blu
+Tags: custom-theme, responsive, two-columns, featured-images, custom-menu
+
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Custom mixins and variables
+# Typography
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Elements
+	## Tables
+	## Elements
+# Content
+# Font 
+# Custom
+# RWD styles
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+/* line 1, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+/* line 7, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+body {
+  margin: 0; }
+
+/* line 22, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+/* line 29, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+/* line 34, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/* line 40, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+[hidden],
+template {
+  display: none; }
+
+/* line 44, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+a {
+  background-color: transparent; }
+
+/* line 49, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* line 53, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/* line 58, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+b,
+strong {
+  font-weight: bold; }
+
+/* line 62, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+dfn {
+  font-style: italic; }
+
+/* line 66, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* line 71, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/* line 76, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+small {
+  font-size: 80%; }
+
+/* line 81, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 88, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+sup {
+  top: -0.5em; }
+
+/* line 92, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+sub {
+  bottom: -0.25em; }
+
+/* line 96, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+img {
+  border: 0; }
+
+/* line 100, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* line 104, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+figure {
+  margin: 1em 40px; }
+
+/* line 108, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+/* line 113, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+pre {
+  overflow: auto; }
+
+/* line 120, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* line 129, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+/* line 135, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+button {
+  overflow: visible; }
+
+/* line 140, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+button,
+select {
+  text-transform: none; }
+
+/* line 147, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+/* line 153, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/* line 158, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/* line 163, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+input {
+  line-height: normal; }
+
+/* line 168, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+/* line 174, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/* line 179, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/* line 183, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/* line 189, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+legend {
+  border: 0;
+  padding: 0; }
+
+/* line 194, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+textarea {
+  overflow: auto; }
+
+/* line 198, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+optgroup {
+  font-weight: bold; }
+
+/* line 202, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 208, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_normalize.scss */
+td,
+th {
+  padding: 0; }
+
+/*--------------------------------------------------------------
+# Custom mixins and variables
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+/*
+============ Import headings styles ===========
+*/
+/*
+============ Main styles ===========
+*/
+/* line 4, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+h1, h2, h3, h4, h5, h6 {
+  clear: both;
+  font-weight: 400;
+  color: #516163; }
+
+/* line 9, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+h1 {
+  font-size: 22px;
+  color: #323B3C;
+  font-family: "Lato", sans-serif; }
+  @media screen and (min-width: 360px) {
+    /* line 9, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    h1 {
+      font-size: 22px; } }
+  @media screen and (min-width: 414px) {
+    /* line 9, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    h1 {
+      font-size: 24px; } }
+  @media screen and (min-width: 600px) {
+    /* line 9, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    h1 {
+      font-size: 28px; } }
+  @media screen and (min-width: 768px) {
+    /* line 9, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    h1 {
+      font-size: 28px; } }
+  @media screen and (min-width: 992px) {
+    /* line 9, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    h1 {
+      font-size: 30px; } }
+  @media screen and (min-width: 1200px) {
+    /* line 9, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    h1 {
+      font-size: 28px; } }
+  @media screen and (min-width: 1600px) {
+    /* line 9, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    h1 {
+      font-size: 34px; } }
+
+/* line 14, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+h2 {
+  font-size: 20px; }
+  @media screen and (min-width: 360px) {
+    /* line 14, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    h2 {
+      font-size: 20px; } }
+  @media screen and (min-width: 414px) {
+    /* line 14, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    h2 {
+      font-size: 20px; } }
+  @media screen and (min-width: 600px) {
+    /* line 14, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    h2 {
+      font-size: 22px; } }
+  @media screen and (min-width: 768px) {
+    /* line 14, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    h2 {
+      font-size: 24px; } }
+  @media screen and (min-width: 992px) {
+    /* line 14, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    h2 {
+      font-size: 26px; } }
+  @media screen and (min-width: 1200px) {
+    /* line 14, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    h2 {
+      font-size: 28px; } }
+  @media screen and (min-width: 1600px) {
+    /* line 14, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    h2 {
+      font-size: 32px; } }
+
+/* line 17, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+h3 {
+  font-size: 20px; }
+  @media screen and (min-width: 360px) {
+    /* line 17, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    h3 {
+      font-size: 20px; } }
+  @media screen and (min-width: 414px) {
+    /* line 17, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    h3 {
+      font-size: 20px; } }
+  @media screen and (min-width: 600px) {
+    /* line 17, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    h3 {
+      font-size: 22px; } }
+  @media screen and (min-width: 768px) {
+    /* line 17, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    h3 {
+      font-size: 22px; } }
+  @media screen and (min-width: 992px) {
+    /* line 17, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    h3 {
+      font-size: 22px; } }
+  @media screen and (min-width: 1200px) {
+    /* line 17, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    h3 {
+      font-size: 22px; } }
+  @media screen and (min-width: 1600px) {
+    /* line 17, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    h3 {
+      font-size: 24px; } }
+
+/*
+============ Front page hero header ===========
+*/
+/* line 24, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+.hero-header h2 {
+  text-align: right;
+  font-size: 20px; }
+  @media screen and (min-width: 360px) {
+    /* line 24, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    .hero-header h2 {
+      font-size: 20px; } }
+  @media screen and (min-width: 414px) {
+    /* line 24, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    .hero-header h2 {
+      font-size: 20px; } }
+  @media screen and (min-width: 600px) {
+    /* line 24, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    .hero-header h2 {
+      font-size: 22px; } }
+  @media screen and (min-width: 768px) {
+    /* line 24, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    .hero-header h2 {
+      font-size: 22px; } }
+  @media screen and (min-width: 992px) {
+    /* line 24, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    .hero-header h2 {
+      font-size: 22px; } }
+  @media screen and (min-width: 1200px) {
+    /* line 24, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    .hero-header h2 {
+      font-size: 22px; } }
+  @media screen and (min-width: 1600px) {
+    /* line 24, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    .hero-header h2 {
+      font-size: 24px; } }
+
+/* line 29, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+.contactBtn {
+  font-size: 20px;
+  text-decoration: none; }
+  @media screen and (min-width: 360px) {
+    /* line 29, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    .contactBtn {
+      font-size: 20px; } }
+  @media screen and (min-width: 414px) {
+    /* line 29, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    .contactBtn {
+      font-size: 20px; } }
+  @media screen and (min-width: 600px) {
+    /* line 29, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    .contactBtn {
+      font-size: 22px; } }
+  @media screen and (min-width: 768px) {
+    /* line 29, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    .contactBtn {
+      font-size: 22px; } }
+  @media screen and (min-width: 992px) {
+    /* line 29, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    .contactBtn {
+      font-size: 22px; } }
+  @media screen and (min-width: 1200px) {
+    /* line 29, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    .contactBtn {
+      font-size: 22px; } }
+  @media screen and (min-width: 1600px) {
+    /* line 29, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    .contactBtn {
+      font-size: 24px; } }
+  /* line 32, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+  .contactBtn:hover {
+    text-decoration: none;
+    color: #63B2BB; }
+
+/* line 37, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+.hero-txt {
+  line-height: 1em;
+  font-size: 5.5em;
+  font-weight: 100;
+  text-align: center; }
+
+/* line 43, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+.hero-amp {
+  color: #aad5da;
+  font-size: 3em;
+  font-style: italic; }
+
+/* line 48, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+.section-heading {
+  text-align: center; }
+
+/*
+============ blog headers ===========
+*/
+/* line 54, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+.post-hero-heading {
+  font-size: 2.8em; }
+
+/* line 59, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+.blog h2.entry-title a {
+  font-size: 22px;
+  color: #323B3C;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  text-decoration: none; }
+  @media screen and (min-width: 360px) {
+    /* line 59, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    .blog h2.entry-title a {
+      font-size: 22px; } }
+  @media screen and (min-width: 414px) {
+    /* line 59, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    .blog h2.entry-title a {
+      font-size: 24px; } }
+  @media screen and (min-width: 600px) {
+    /* line 59, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    .blog h2.entry-title a {
+      font-size: 28px; } }
+  @media screen and (min-width: 768px) {
+    /* line 59, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    .blog h2.entry-title a {
+      font-size: 28px; } }
+  @media screen and (min-width: 992px) {
+    /* line 59, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    .blog h2.entry-title a {
+      font-size: 30px; } }
+  @media screen and (min-width: 1200px) {
+    /* line 59, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    .blog h2.entry-title a {
+      font-size: 28px; } }
+  @media screen and (min-width: 1600px) {
+    /* line 59, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+    .blog h2.entry-title a {
+      font-size: 34px; } }
+  /* line 65, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_headings.scss */
+  .blog h2.entry-title a:hover {
+    text-decoration: underline; }
+
+/*
+============ Main styles ===========
+*/
+/* line 12, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+body,
+button,
+input,
+select,
+textarea {
+  color: #516163;
+  font-family: "Open Sans", sans-serif;
+  font-size: 10px;
+  line-height: 1.5;
+  font-weight: 400; }
+  @media screen and (min-width: 360px) {
+    /* line 12, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+    body,
+    button,
+    input,
+    select,
+    textarea {
+      font-size: 12px; } }
+  @media screen and (min-width: 414px) {
+    /* line 12, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+    body,
+    button,
+    input,
+    select,
+    textarea {
+      font-size: 12px; } }
+  @media screen and (min-width: 600px) {
+    /* line 12, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+    body,
+    button,
+    input,
+    select,
+    textarea {
+      font-size: 14px; } }
+  @media screen and (min-width: 768px) {
+    /* line 12, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+    body,
+    button,
+    input,
+    select,
+    textarea {
+      font-size: 16px; } }
+  @media screen and (min-width: 992px) {
+    /* line 12, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+    body,
+    button,
+    input,
+    select,
+    textarea {
+      font-size: 18px; } }
+  @media screen and (min-width: 1200px) {
+    /* line 12, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+    body,
+    button,
+    input,
+    select,
+    textarea {
+      font-size: 20px; } }
+  @media screen and (min-width: 1600px) {
+    /* line 12, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+    body,
+    button,
+    input,
+    select,
+    textarea {
+      font-size: 20px; } }
+
+/* line 19, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+.lighter {
+  font-weight: 100; }
+
+/*
+============ blog and single styles ===========
+*/
+/* line 29, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+.posted-on,
+.entry-footer,
+.more-link,
+.author,
+.widget .cat-item {
+  font-weight: 100; }
+  /* line 31, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+  .posted-on a,
+  .entry-footer a,
+  .more-link a,
+  .author a,
+  .widget .cat-item a {
+    text-decoration: none; }
+    /* line 33, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+    .posted-on a:hover,
+    .entry-footer a:hover,
+    .more-link a:hover,
+    .author a:hover,
+    .widget .cat-item a:hover {
+      text-decoration: underline; }
+
+/* line 38, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+.more-link {
+  font-weight: 100;
+  text-decoration: none; }
+  /* line 41, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+  .more-link:hover {
+    text-decoration: underline; }
+
+/*
+============ Menu ===========
+*/
+/* line 50, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+.main-navigation ul li a {
+  font-size: 24px; }
+  @media screen and (min-width: 360px) {
+    /* line 50, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+    .main-navigation ul li a {
+      font-size: 25px; } }
+  @media screen and (min-width: 414px) {
+    /* line 50, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+    .main-navigation ul li a {
+      font-size: 26px; } }
+  @media screen and (min-width: 600px) {
+    /* line 50, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+    .main-navigation ul li a {
+      font-size: 28px; } }
+  @media screen and (min-width: 768px) {
+    /* line 50, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+    .main-navigation ul li a {
+      font-size: 28px; } }
+  @media screen and (min-width: 992px) {
+    /* line 50, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+    .main-navigation ul li a {
+      font-size: 28px; } }
+  @media screen and (min-width: 1200px) {
+    /* line 50, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+    .main-navigation ul li a {
+      font-size: 30px; } }
+  @media screen and (min-width: 1600px) {
+    /* line 50, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+    .main-navigation ul li a {
+      font-size: 30px; } }
+
+/*
+============ Menu Social ===========
+*/
+/* line 59, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+.navbar-social:not(.mobile) li a {
+  font-size: 1.7em;
+  color: #516163;
+  transition: .3s all ease;
+  text-decoration: none; }
+  /* line 66, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+  .navbar-social:not(.mobile) li a:hover,
+  .navbar-social:not(.mobile) li a:focus,
+  .navbar-social:not(.mobile) li a:active {
+    color: #63B2BB;
+    border-top: 1px solid #63B2BB; }
+
+/* line 75, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+.navbar-social.mobile .fb a, .navbar-social.mobile .linkedin a {
+  font-size: 0; }
+
+/* line 78, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+.navbar-social.mobile .fb a:before, .navbar-social.mobile .linkedin a:before {
+  font-family: 'icomoon';
+  font-size: 40px;
+  color: #516163; }
+  /* line 84, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+  .navbar-social.mobile .fb a:before:hover,
+  .navbar-social.mobile .fb a:before:focus,
+  .navbar-social.mobile .fb a:before:active, .navbar-social.mobile .linkedin a:before:hover,
+  .navbar-social.mobile .linkedin a:before:focus,
+  .navbar-social.mobile .linkedin a:before:active {
+    color: #63B2BB; }
+
+/*
+============ Front-page projects ===========
+*/
+/* line 94, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+.projects figure .projects-readMore {
+  font-family: "Lora", sans-serif;
+  font-weight: 100;
+  font-size: 0.8em;
+  text-decoration: none;
+  color: #516163; }
+  /* line 100, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+  .projects figure .projects-readMore:after {
+    font-family: 'icomoon';
+    font-size: 0.8em; }
+
+/* line 107, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+.projects figure:hover p,
+.projects figure:hover .projects-readMore {
+  color: #63B2BB; }
+
+/* line 112, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+figcaption {
+  text-align: center;
+  font-size: 1.6em;
+  font-weight: 100; }
+
+/*
+============ Footer ===========
+*/
+/* line 121, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+.site-design a {
+  color: #212121;
+  text-decoration: none; }
+
+/* line 126, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+.site-footer {
+  color: #212121;
+  text-align: center;
+  font-size: 10px; }
+  @media screen and (min-width: 360px) {
+    /* line 126, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+    .site-footer {
+      font-size: 10px; } }
+  @media screen and (min-width: 414px) {
+    /* line 126, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+    .site-footer {
+      font-size: 10px; } }
+  @media screen and (min-width: 600px) {
+    /* line 126, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+    .site-footer {
+      font-size: 10px; } }
+  @media screen and (min-width: 768px) {
+    /* line 126, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+    .site-footer {
+      font-size: 12px; } }
+  @media screen and (min-width: 992px) {
+    /* line 126, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+    .site-footer {
+      font-size: 12px; } }
+  @media screen and (min-width: 1200px) {
+    /* line 126, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+    .site-footer {
+      font-size: 14px; } }
+  @media screen and (min-width: 1600px) {
+    /* line 126, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/typography/_typography.scss */
+    .site-footer {
+      font-size: 14px; } }
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+/* line 1, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/forms/_buttons.scss */
+input[type="submit"] {
+  font-size: 1em;
+  line-height: normal;
+  cursor: pointer;
+  border: 0;
+  padding: 0 2em;
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  /* line 14, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/forms/_buttons.scss */
+  input[type="submit"]:hover,
+  input[type="submit"]:active,
+  input[type="submit"]:focus {
+    background-color: #448AFF;
+    color: #ffffff;
+    box-shadow: 0 14px 20px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+@media screen and (min-width: 768px) {
+  /* line 21, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/forms/_buttons.scss */
+  input[type="submit"] {
+    font-size: 1.3em; } }
+
+/* line 2, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/forms/_fields.scss */
+.contact-form {
+  outline: 0; }
+
+/* line 5, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/forms/_fields.scss */
+.form-container {
+  /* label state styles */ }
+  /* line 6, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/forms/_fields.scss */
+  .form-container .input-container {
+    display: flex;
+    align-items: center;
+    margin: 0 auto 1.5em; }
+  /* line 11, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/forms/_fields.scss */
+  .form-container label {
+    order: 1;
+    width: 4em;
+    text-align: center;
+    padding-right: 0.5em;
+    white-space: nowrap;
+    user-select: none;
+    cursor: pointer;
+    font-size: 2em;
+    transition: all 0.555s cubic-bezier(0.23, 1, 0.32, 1); }
+  /* line 22, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/forms/_fields.scss */
+  .form-container input {
+    height: 2em; }
+  /* line 25, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/forms/_fields.scss */
+  .form-container input:not([type="submit"]), .form-container textarea {
+    order: 2;
+    flex: 1 1 auto;
+    border: 0;
+    border-bottom: 1px solid;
+    transition: all 0.555s cubic-bezier(0.23, 1, 0.32, 1); }
+    /* line 31, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/forms/_fields.scss */
+    .form-container input:not([type="submit"])::placeholder, .form-container textarea::placeholder {
+      transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1); }
+  /* line 36, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/forms/_fields.scss */
+  .form-container input:focus, .form-container textarea:focus {
+    outline: 0;
+    border-bottom-color: #63B2BB; }
+    /* line 39, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/forms/_fields.scss */
+    .form-container input:focus ~ label, .form-container textarea:focus ~ label {
+      color: #63B2BB;
+      font-size: 1.5em; }
+    /* line 43, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/forms/_fields.scss */
+    .form-container input:focus::placeholder, .form-container textarea:focus::placeholder {
+      opacity: 0; }
+  /* line 47, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/forms/_fields.scss */
+  .form-container div.wpcf7-validation-errors {
+    text-align: center; }
+  /* line 50, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/forms/_fields.scss */
+  .form-container textarea {
+    height: 5em; }
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+/* line 1, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_links.scss */
+a {
+  color: #63B2BB; }
+  /* line 4, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_links.scss */
+  a:visited {
+    color: #63B2BB; }
+  /* line 9, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_links.scss */
+  a:hover,
+  a:focus,
+  a:active {
+    color: #323B3C;
+    text-decoration: underline; }
+  /* line 13, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_links.scss */
+  a:focus {
+    outline: thin dotted; }
+  /* line 17, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_links.scss */
+  a:hover,
+  a:active {
+    outline: 0; }
+
+/*--------------------------------------------------------------
+## Menu social
+--------------------------------------------------------------*/
+/* line 4, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_social-menu.scss */
+.navbar-social:not(.mobile) {
+  list-style: none;
+  overflow: hidden;
+  clear: both;
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 26%;
+  padding: 0; }
+  /* line 13, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_social-menu.scss */
+  .navbar-social:not(.mobile) li {
+    margin: 0 1em;
+    text-align: center; }
+
+/* line 19, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_social-menu.scss */
+.navbar-social.mobile {
+  padding: 0;
+  width: 100%;
+  list-style: none;
+  position: absolute;
+  bottom: 40px;
+  left: 15px; }
+  /* line 26, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_social-menu.scss */
+  .navbar-social.mobile .fb, .navbar-social.mobile .linkedin {
+    float: left;
+    display: block; }
+    /* line 29, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_social-menu.scss */
+    .navbar-social.mobile .fb a, .navbar-social.mobile .linkedin a {
+      position: relative;
+      color: transparent !important;
+      transition: .3s all; }
+      /* line 33, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_social-menu.scss */
+      .navbar-social.mobile .fb a:before, .navbar-social.mobile .linkedin a:before {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        color: #ddd; }
+      /* line 42, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_social-menu.scss */
+      .navbar-social.mobile .fb a:hover:before, .navbar-social.mobile .linkedin a:hover:before {
+        color: #ffffff; }
+  /* line 51, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_social-menu.scss */
+  .navbar-social.mobile .fb a:before {
+    content: "\e05d"; }
+  /* line 59, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_social-menu.scss */
+  .navbar-social.mobile .linkedin a:before {
+    left: 60px;
+    content: "\e062"; }
+
+/*--------------------------------------------------------------
+## Menu primary
+--------------------------------------------------------------*/
+/* line 1, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_menus.scss */
+.main-navigation {
+  position: fixed;
+  display: table;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background-color: #212121;
+  background-image: url(dist/img/code.jpg);
+  background-repeat: no-repeat;
+  background-position: top left;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.75s cubic-bezier(0.23, 1, 0.32, 1); }
+  /* line 16, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_menus.scss */
+  .main-navigation ul.navbar-nav {
+    float: left;
+    list-style: none;
+    padding: 0 5%;
+    display: table-cell;
+    width: 100%;
+    margin-top: 25%;
+    text-align: center;
+    vertical-align: middle;
+    transform: translateX(50px);
+    transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+    pointer-events: none;
+    cursor: default; }
+    /* line 29, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_menus.scss */
+    .main-navigation ul.navbar-nav ul {
+      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+      float: left;
+      position: absolute;
+      top: 1.5em;
+      left: -999em;
+      z-index: 99999; }
+      /* line 36, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_menus.scss */
+      .main-navigation ul.navbar-nav ul ul {
+        left: -999em;
+        top: 0; }
+      /* line 42, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_menus.scss */
+      .main-navigation ul.navbar-nav ul li:hover > ul,
+      .main-navigation ul.navbar-nav ul li.focus > ul {
+        left: 100%; }
+    /* line 48, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_menus.scss */
+    .main-navigation ul.navbar-nav li:hover > ul,
+    .main-navigation ul.navbar-nav li.focus > ul {
+      left: auto; }
+    /* line 51, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_menus.scss */
+    .main-navigation ul.navbar-nav li {
+      float: left;
+      display: block;
+      width: 100%;
+      transition: .3s all; }
+      /* line 57, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_menus.scss */
+      .main-navigation ul.navbar-nav li:hover > a,
+      .main-navigation ul.navbar-nav li.focus > a {
+        color: #63B2BB;
+        border-bottom: 1px solid #516163; }
+    /* line 63, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_menus.scss */
+    .main-navigation ul.navbar-nav a {
+      text-decoration: none; }
+    /* line 74, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_menus.scss */
+    .main-navigation ul.navbar-nav:before,
+    .main-navigation ul.navbar-nav:after {
+      position: absolute;
+      content: '';
+      display: block;
+      text-align: center;
+      vertical-align: middle;
+      top: -65px;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      width: 1px;
+      height: 50px;
+      background-color: #516163; }
+    /* line 88, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_menus.scss */
+    .main-navigation ul.navbar-nav:after {
+      bottom: -65px;
+      top: auto; }
+
+/*  menu Header */
+/* line 95, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_menus.scss */
+.navbar-header {
+  width: 100%;
+  float: left; }
+
+/* line 99, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_menus.scss */
+.navbar-brand {
+  display: block;
+  width: 180px;
+  margin-top: 3em;
+  margin-left: 1.5em; }
+
+/* Small menu. */
+/* line 106, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_menus.scss */
+.menu-toggle {
+  display: block;
+  font-size: 30px;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  z-index: 99999;
+  border: 0;
+  box-shadow: none;
+  background: transparent;
+  outline: transparent;
+  transition: transform 0.5s; }
+  /* line 118, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_menus.scss */
+  .menu-toggle .menu-bar {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #cccccc;
+    border-radius: 1px;
+    margin: 8px auto; }
+
+/* toggled state of menu. */
+/* line 128, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_menus.scss */
+.toggleAdditional {
+  position: fixed;
+  top: 5%;
+  height: 1em; }
+  /* line 132, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_menus.scss */
+  .toggleAdditional .menu-bar {
+    margin: 0;
+    display: block;
+    position: absolute;
+    transition: opacity 0.4s, transform 0.4s; }
+    /* line 141, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_menus.scss */
+    .toggleAdditional .menu-bar:nth-child(2) {
+      transform: rotate(-135deg);
+      top: 7px; }
+    /* line 145, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_menus.scss */
+    .toggleAdditional .menu-bar:nth-child(3) {
+      transform: rotate(135deg);
+      top: 7px; }
+    /* line 149, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_menus.scss */
+    .toggleAdditional .menu-bar:last-child {
+      transform: translateX(-300%);
+      opacity: 0; }
+
+/* line 155, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_menus.scss */
+.main-navigation.toggled {
+  opacity: 1;
+  z-index: 99998; }
+  /* line 158, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_menus.scss */
+  .main-navigation.toggled body {
+    right: 50%;
+    width: 100%; }
+  /* line 162, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_menus.scss */
+  .main-navigation.toggled .menu-toggle {
+    z-index: 99999; }
+
+/* line 166, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_menus.scss */
+.main-navigation.toggled ul {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+  cursor: default; }
+
+@media screen and (min-width: 768px) {
+  /* line 174, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_menus.scss */
+  .navbar-brand {
+    width: 250px; }
+  /* line 178, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_menus.scss */
+  .menu-toggle .menu-bar {
+    width: 45px;
+    height: 3px; } }
+
+/* line 198, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_menus.scss */
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+  margin: 0 0 1.5em;
+  overflow: hidden; }
+
+/* line 203, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_menus.scss */
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+  float: left;
+  width: 50%; }
+
+/* line 208, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/navigation/_menus.scss */
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+  float: right;
+  text-align: right;
+  width: 50%; }
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+/* line 1, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_elements.scss */
+html {
+  box-sizing: border-box; }
+
+/* line 7, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_elements.scss */
+*,
+*:before,
+*:after {
+  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  box-sizing: inherit; }
+
+/* line 11, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_elements.scss */
+body {
+  background: #ffffff;
+  /* Fallback for when there is no custom background color defined. */ }
+
+/* line 15, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_elements.scss */
+blockquote, q {
+  quotes: "" ""; }
+  /* line 19, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_elements.scss */
+  blockquote:before,
+  blockquote:after, q:before,
+  q:after {
+    content: ""; }
+
+/* line 24, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_elements.scss */
+hr {
+  background-color: #ddd;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em; }
+
+/* line 32, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_elements.scss */
+img {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */ }
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("fonts/icomoon/fonts/icomoon.eot?n4r07q");
+  src: url("fonts/icomoon/fonts/icomoon.eot?n4r07q#iefix") format("embedded-opentype"), url("fonts/icomoon/fonts/icomoon.ttf?n4r07q") format("truetype"), url("fonts/icomoon/fonts/icomoon.woff?n4r07q") format("woff"), url("fonts/icomoon/fonts/icomoon.svg?n4r07q#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* line 14, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* line 29, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-mobile:before {
+  content: "\e000"; }
+
+/* line 32, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-laptop:before {
+  content: "\e001"; }
+
+/* line 35, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-desktop:before {
+  content: "\e002"; }
+
+/* line 38, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-tablet:before {
+  content: "\e003"; }
+
+/* line 41, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-phone:before {
+  content: "\e004"; }
+
+/* line 44, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-document:before {
+  content: "\e005"; }
+
+/* line 47, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-documents:before {
+  content: "\e006"; }
+
+/* line 50, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-search:before {
+  content: "\e007"; }
+
+/* line 53, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-clipboard2:before {
+  content: "\e008"; }
+
+/* line 56, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-newspaper:before {
+  content: "\e009"; }
+
+/* line 59, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-notebook:before {
+  content: "\e00a"; }
+
+/* line 62, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-book-open:before {
+  content: "\e00b"; }
+
+/* line 65, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-browser:before {
+  content: "\e00c"; }
+
+/* line 68, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-calendar:before {
+  content: "\e00d"; }
+
+/* line 71, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-presentation:before {
+  content: "\e00e"; }
+
+/* line 74, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-picture:before {
+  content: "\e00f"; }
+
+/* line 77, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-pictures:before {
+  content: "\e010"; }
+
+/* line 80, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-video:before {
+  content: "\e011"; }
+
+/* line 83, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-camera:before {
+  content: "\e012"; }
+
+/* line 86, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-printer:before {
+  content: "\e013"; }
+
+/* line 89, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-toolbox:before {
+  content: "\e014"; }
+
+/* line 92, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-briefcase:before {
+  content: "\e015"; }
+
+/* line 95, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-wallet:before {
+  content: "\e016"; }
+
+/* line 98, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-gift:before {
+  content: "\e017"; }
+
+/* line 101, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-bargraph:before {
+  content: "\e018"; }
+
+/* line 104, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-grid:before {
+  content: "\e019"; }
+
+/* line 107, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-expand:before {
+  content: "\e01a"; }
+
+/* line 110, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-focus:before {
+  content: "\e01b"; }
+
+/* line 113, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-edit:before {
+  content: "\e01c"; }
+
+/* line 116, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-adjustments:before {
+  content: "\e01d"; }
+
+/* line 119, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-ribbon:before {
+  content: "\e01e"; }
+
+/* line 122, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-hourglass:before {
+  content: "\e01f"; }
+
+/* line 125, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-lock:before {
+  content: "\e020"; }
+
+/* line 128, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-megaphone:before {
+  content: "\e021"; }
+
+/* line 131, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-shield:before {
+  content: "\e022"; }
+
+/* line 134, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-trophy:before {
+  content: "\e023"; }
+
+/* line 137, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-flag:before {
+  content: "\e024"; }
+
+/* line 140, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-map:before {
+  content: "\e025"; }
+
+/* line 143, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-puzzle:before {
+  content: "\e026"; }
+
+/* line 146, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-basket:before {
+  content: "\e027"; }
+
+/* line 149, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-envelope2:before {
+  content: "\e028"; }
+
+/* line 152, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-streetsign:before {
+  content: "\e029"; }
+
+/* line 155, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-telescope:before {
+  content: "\e02a"; }
+
+/* line 158, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-gears:before {
+  content: "\e02b"; }
+
+/* line 161, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-key:before {
+  content: "\e02c"; }
+
+/* line 164, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-paperclip:before {
+  content: "\e02d"; }
+
+/* line 167, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-attachment:before {
+  content: "\e02e"; }
+
+/* line 170, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-pricetags:before {
+  content: "\e02f"; }
+
+/* line 173, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-lightbulb:before {
+  content: "\e030"; }
+
+/* line 176, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-layers:before {
+  content: "\e031"; }
+
+/* line 179, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-pencil:before {
+  content: "\e032"; }
+
+/* line 182, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-tools:before {
+  content: "\e033"; }
+
+/* line 185, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-tools-2:before {
+  content: "\e034"; }
+
+/* line 188, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-scissors:before {
+  content: "\e035"; }
+
+/* line 191, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-paintbrush:before {
+  content: "\e036"; }
+
+/* line 194, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-magnifying-glass:before {
+  content: "\e037"; }
+
+/* line 197, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-circle-compass:before {
+  content: "\e038"; }
+
+/* line 200, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-linegraph:before {
+  content: "\e039"; }
+
+/* line 203, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-mic:before {
+  content: "\e03a"; }
+
+/* line 206, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-strategy:before {
+  content: "\e03b"; }
+
+/* line 209, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-beaker:before {
+  content: "\e03c"; }
+
+/* line 212, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-caution:before {
+  content: "\e03d"; }
+
+/* line 215, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-recycle:before {
+  content: "\e03e"; }
+
+/* line 218, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-anchor:before {
+  content: "\e03f"; }
+
+/* line 221, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-profile-male:before {
+  content: "\e040"; }
+
+/* line 224, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-profile-female:before {
+  content: "\e041"; }
+
+/* line 227, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-bike:before {
+  content: "\e042"; }
+
+/* line 230, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-wine:before {
+  content: "\e043"; }
+
+/* line 233, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-hotairballoon:before {
+  content: "\e044"; }
+
+/* line 236, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-globe2:before {
+  content: "\e045"; }
+
+/* line 239, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-genius:before {
+  content: "\e046"; }
+
+/* line 242, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-map-pin:before {
+  content: "\e047"; }
+
+/* line 245, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-dial:before {
+  content: "\e048"; }
+
+/* line 248, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-chat:before {
+  content: "\e049"; }
+
+/* line 251, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-heart:before {
+  content: "\e04a"; }
+
+/* line 254, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-cloud:before {
+  content: "\e04b"; }
+
+/* line 257, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-upload:before {
+  content: "\e04c"; }
+
+/* line 260, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-download:before {
+  content: "\e04d"; }
+
+/* line 263, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-target:before {
+  content: "\e04e"; }
+
+/* line 266, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-hazardous:before {
+  content: "\e04f"; }
+
+/* line 269, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-piechart:before {
+  content: "\e050"; }
+
+/* line 272, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-speedometer:before {
+  content: "\e051"; }
+
+/* line 275, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-global:before {
+  content: "\e052"; }
+
+/* line 278, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-compass:before {
+  content: "\e053"; }
+
+/* line 281, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-lifesaver:before {
+  content: "\e054"; }
+
+/* line 284, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-clock:before {
+  content: "\e055"; }
+
+/* line 287, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-aperture:before {
+  content: "\e056"; }
+
+/* line 290, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-quote:before {
+  content: "\e057"; }
+
+/* line 293, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-scope:before {
+  content: "\e058"; }
+
+/* line 296, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-alarmclock:before {
+  content: "\e059"; }
+
+/* line 299, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-refresh:before {
+  content: "\e05a"; }
+
+/* line 302, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-happy:before {
+  content: "\e05b"; }
+
+/* line 305, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-sad:before {
+  content: "\e05c"; }
+
+/* line 308, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-facebook:before {
+  content: "\e05d"; }
+
+/* line 311, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-twitter:before {
+  content: "\e05e"; }
+
+/* line 314, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-googleplus:before {
+  content: "\e05f"; }
+
+/* line 317, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-rss:before {
+  content: "\e060"; }
+
+/* line 320, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-tumblr:before {
+  content: "\e061"; }
+
+/* line 323, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-linkedin2:before {
+  content: "\e062"; }
+
+/* line 326, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-dribbble:before {
+  content: "\e063"; }
+
+/* line 329, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-envelope-o:before {
+  content: "\f003"; }
+
+/* line 332, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-file-o:before {
+  content: "\f016"; }
+
+/* line 335, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-headphones:before {
+  content: "\f025"; }
+
+/* line 338, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-book:before {
+  content: "\f02d"; }
+
+/* line 341, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-plane:before {
+  content: "\f072"; }
+
+/* line 344, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-github-square:before {
+  content: "\f092"; }
+
+/* line 347, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-github:before {
+  content: "\f09b"; }
+
+/* line 350, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-globe:before {
+  content: "\f0ac"; }
+
+/* line 353, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-envelope:before {
+  content: "\f0e0"; }
+
+/* line 356, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-linkedin:before {
+  content: "\f0e1"; }
+
+/* line 359, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-clipboard:before {
+  content: "\f0ea"; }
+
+/* line 362, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-paste:before {
+  content: "\f0ea"; }
+
+/* line 365, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-coffee:before {
+  content: "\f0f4"; }
+
+/* line 368, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-github-alt:before {
+  content: "\f113"; }
+
+/* line 371, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-gamepad:before {
+  content: "\f11b"; }
+
+/* line 374, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-skype:before {
+  content: "\f17e"; }
+
+/* line 377, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-bank:before {
+  content: "\f19c"; }
+
+/* line 380, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-institution:before {
+  content: "\f19c"; }
+
+/* line 383, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-university:before {
+  content: "\f19c"; }
+
+/* line 386, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-graduation-cap:before {
+  content: "\f19d"; }
+
+/* line 389, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-mortar-board:before {
+  content: "\f19d"; }
+
+/* line 392, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-git-square:before {
+  content: "\f1d2"; }
+
+/* line 395, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-git:before {
+  content: "\f1d3"; }
+
+/* line 398, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-at:before {
+  content: "\f1fa"; }
+
+/* line 401, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-paint-brush:before {
+  content: "\f1fc"; }
+
+/* line 404, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-bicycle:before {
+  content: "\f206"; }
+
+/* line 407, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-leanpub:before {
+  content: "\f212"; }
+
+/* line 410, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-battery-4:before {
+  content: "\f240"; }
+
+/* line 413, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-battery-full:before {
+  content: "\f240"; }
+
+/* line 416, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-battery-3:before {
+  content: "\f241"; }
+
+/* line 419, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-battery-three-quarters:before {
+  content: "\f241"; }
+
+/* line 422, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-battery-1:before {
+  content: "\f243"; }
+
+/* line 425, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_icons.scss */
+.icon-battery-quarter:before {
+  content: "\f243"; }
+
+/* line 1, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_tables.scss */
+table {
+  margin: 0 0 1.5em;
+  text-align: left; }
+  /* line 4, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_tables.scss */
+  table p {
+    padding-left: 0px; }
+  /* line 7, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_tables.scss */
+  table td, table th {
+    vertical-align: top;
+    padding: 0px 0px 15px 0px; }
+  /* line 11, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_tables.scss */
+  table td {
+    padding-left: 10px; }
+  /* line 14, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_tables.scss */
+  table th {
+    position: relative;
+    padding-right: 10px; }
+    /* line 17, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_tables.scss */
+    table th:after {
+      position: absolute;
+      content: ':';
+      display: inline-block;
+      bottom: 0;
+      right: 0;
+      width: 2px;
+      height: 100%; }
+  /* line 27, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/elements/_tables.scss */
+  table address {
+    margin: 0; }
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+/* line 1, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/site/primary/_posts-and-pages.scss */
+.sticky {
+  display: block; }
+
+/* line 5, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/site/primary/_posts-and-pages.scss */
+.hentry {
+  margin: 0 0 1.5em; }
+
+/* line 10, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/site/primary/_posts-and-pages.scss */
+.byline,
+.updated:not(.published) {
+  display: none; }
+
+/* line 15, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/site/primary/_posts-and-pages.scss */
+.single .byline,
+.group-blog .byline {
+  display: inline; }
+
+/* line 21, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/site/primary/_posts-and-pages.scss */
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 1.5em 0 0; }
+
+/* line 25, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/site/primary/_posts-and-pages.scss */
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em; }
+
+/*--------------------------------------------------------------
+## Asides
+--------------------------------------------------------------*/
+/* line 2, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/site/primary/_asides.scss */
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+  display: none; }
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+/* line 1, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/site/primary/_comments.scss */
+.comment-content a {
+  word-wrap: break-word; }
+
+/* line 4, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/site/primary/_comments.scss */
+.bypostauthor {
+  display: block; }
+
+/*--------------------------------------------------------------
+# Custom
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Blog styles
+--------------------------------------------------------------*/
+/* line 3, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_blog.scss */
+.blog .site-main,
+.blog .hero-header {
+  margin: 20px; }
+
+/* line 6, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_blog.scss */
+.blog .site-main {
+  background: #fff;
+  position: relative;
+  border-top: 40px solid transparent;
+  border-image: url(dist/img/border.png) 60 repeat; }
+
+/* line 12, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_blog.scss */
+.blog .hentry {
+  background: #fff;
+  position: relative;
+  border: 0; }
+
+/* line 18, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_blog.scss */
+.post-hero-heading {
+  position: absolute;
+  z-index: 999;
+  left: 60px;
+  top: 10%; }
+
+/* line 24, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_blog.scss */
+.post-hero {
+  display: none;
+  overflow: hidden;
+  width: 100%;
+  height: 450px;
+  padding: 0;
+  margin: 20px 0;
+  background: url(dist/img/layers/bg.jpg) no-repeat center bottom/cover; }
+  /* line 32, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_blog.scss */
+  .post-hero li {
+    list-style: none; }
+
+/* line 36, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_blog.scss */
+.post-hero-mobile {
+  display: block;
+  background: url(dist/img/ships.jpg) no-repeat center bottom/cover;
+  height: 320px; }
+
+/* line 42, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_blog.scss */
+.post-thum img {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+
+/* line 47, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_blog.scss */
+.post-thum:hover img {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+/* line 53, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_blog.scss */
+.layer-1 {
+  left: 10% !important; }
+
+/* line 53, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_blog.scss */
+.layer-2 {
+  left: 20% !important; }
+
+/* line 53, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_blog.scss */
+.layer-3 {
+  left: 30% !important; }
+
+/* line 53, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_blog.scss */
+.layer-4 {
+  left: 40% !important; }
+
+/* line 53, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_blog.scss */
+.layer-5 {
+  left: 50% !important; }
+
+/* line 53, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_blog.scss */
+.layer-6 {
+  left: 60% !important; }
+
+/* line 53, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_blog.scss */
+.layer-7 {
+  left: 70% !important; }
+
+/* line 53, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_blog.scss */
+.layer-8 {
+  left: 80% !important; }
+
+/* line 58, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_blog.scss */
+.layer {
+  top: 42% !important;
+  position: absolute !important; }
+
+/* line 62, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_blog.scss */
+.layer-bg {
+  top: 0; }
+
+@media only screen and (min-width: 992px) {
+  /* line 68, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_blog.scss */
+  .blog .widget-area {
+    max-width: 25%;
+    float: left; }
+  /* line 73, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_blog.scss */
+  .blog-content {
+    max-width: 75%;
+    float: left; } }
+
+@media only screen and (min-width: 1200px) {
+  /* line 79, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_blog.scss */
+  .post-hero {
+    display: block; }
+  /* line 82, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_blog.scss */
+  .post-hero-mobile {
+    display: none; } }
+
+@media only screen and (min-width: 1600px) {
+  /* line 87, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_blog.scss */
+  .post-hero {
+    height: 600px; }
+  /* line 90, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_blog.scss */
+  .layer {
+    top: 50% !important; } }
+
+/*--------------------------------------------------------------
+# Resume styles
+--------------------------------------------------------------*/
+/* line 2, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+.hero-cv-img {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto; }
+  /* line 7, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+  .hero-cv-img img {
+    border-radius: 50%;
+    max-height: 250px;
+    border: solid 2px;
+    border-color: #ccc #ccc #63B2BB #63B2BB; }
+
+/* line 14, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+.cv-header {
+  margin-bottom: 50px; }
+  /* line 16, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+  .cv-header h2, .cv-header h3 {
+    text-align: center; }
+  /* line 19, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+  .cv-header h2 {
+    margin-bottom: 0; }
+  /* line 22, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+  .cv-header h3 {
+    margin-top: 0;
+    color: #63B2BB;
+    font-weight: 100; }
+
+/* line 29, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+.cv-block-heading {
+  color: #fff;
+  background-color: #323232;
+  border-left: solid 10px #63B2BB;
+  padding-left: 15px; }
+
+/* line 36, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+.cv-timeline {
+  margin: 150px auto; }
+  /* line 38, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+  .cv-timeline ul {
+    list-style: none;
+    position: relative;
+    display: block;
+    border-bottom: #323232 solid 4px; }
+    /* line 44, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+    .cv-timeline ul:after,
+    .cv-timeline ul:before {
+      position: absolute;
+      content: '';
+      display: block;
+      top: -10px;
+      background-color: #323232;
+      border-radius: 100%;
+      width: 20px;
+      height: 20px; }
+    /* line 54, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+    .cv-timeline ul:after {
+      left: -5px; }
+    /* line 57, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+    .cv-timeline ul:before {
+      right: -5px; }
+  /* line 61, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+  .cv-timeline li {
+    position: absolute;
+    top: 0px;
+    left: 50px;
+    padding-top: 1.5em;
+    font-size: .85em;
+    max-width: 100px;
+    text-align: center; }
+    /* line 69, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+    .cv-timeline li:nth-child(2) {
+      left: calc(50% - 50px); }
+    /* line 72, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+    .cv-timeline li:last-child {
+      right: 50px;
+      left: auto; }
+    /* line 76, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+    .cv-timeline li:after {
+      position: absolute;
+      content: '';
+      display: block;
+      top: -10px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border-radius: 100%;
+      border: solid 1px #323232;
+      width: 20px;
+      height: 20px; }
+  /* line 91, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+  .cv-timeline span {
+    display: block;
+    position: absolute;
+    top: -2em;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    font-size: 2.5em; }
+
+/* line 103, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+.page-template-page-cv [class*=" icon-"], .page-template-page-cv [class^=icon-] {
+  text-shadow: 1px 1px 1px #000; }
+
+/* line 106, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+.page-template-page-cv .icon-heart {
+  text-shadow: none; }
+
+/* line 111, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+.cv-content a {
+  color: currentColor;
+  text-decoration: none; }
+  /* line 114, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+  .cv-content a:hover {
+    text-decoration: underline; }
+
+/* line 121, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+.cv-work ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  /* line 125, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+  .cv-work ul li {
+    font-weight: 600;
+    margin-bottom: 1em; }
+  /* line 129, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+  .cv-work ul .lighter {
+    font-size: 0.9em; }
+
+/* line 136, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+.skill-bullet-empty,
+.skill-bullet-full {
+  display: inline-block;
+  float: left;
+  margin-top: 5px;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+/* line 146, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+.skill-bullet-empty {
+  background-image: url(dist/img/bullet-empty.png); }
+
+/* line 149, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+.skill-bullet-full {
+  background-image: url(dist/img/bullet.png); }
+
+/* line 154, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+.cv-hobby ul, .cv-social ul {
+  list-style: none;
+  display: flex;
+  padding: 0px; }
+  /* line 158, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+  .cv-hobby ul li, .cv-social ul li {
+    flex: 1;
+    text-align: center; }
+
+/* line 163, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+.cv-hobby [class^=icon-], .cv-social [class^=icon-] {
+  display: block;
+  font-size: 3em;
+  margin: 20px auto; }
+
+/* line 169, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+.cv-hobby a [class*=" icon-"], .cv-hobby a [class^=icon-], .cv-social a [class*=" icon-"], .cv-social a [class^=icon-] {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+
+/* line 172, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+.cv-hobby a:hover, .cv-social a:hover {
+  text-decoration: none; }
+  /* line 174, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+  .cv-hobby a:hover [class*=" icon-"], .cv-hobby a:hover [class^=icon-], .cv-social a:hover [class*=" icon-"], .cv-social a:hover [class^=icon-] {
+    transform: scale(0.8); }
+
+@media screen and (min-width: 992px) {
+  /* line 182, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+  .cv-work {
+    padding-right: 15px; }
+  /* line 185, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+  .cv-infos {
+    padding-left: 15px; }
+  /* line 188, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_cv.scss */
+  .cv-skill1, .cv-skill2 {
+    padding-right: 10px; } }
+
+/*--------------------------------------------------------------
+# single post styles
+--------------------------------------------------------------*/
+/* line 2, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_single.scss */
+.single .site-main {
+  margin: 10px auto;
+  padding: 10px; }
+
+/* line 6, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_single.scss */
+.single .container {
+  padding: 0; }
+
+/* line 10, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_single.scss */
+.single-content {
+  position: relative;
+  background: #fff; }
+
+/* line 14, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_single.scss */
+.comments-area {
+  border-top: 3px dotted #ccc; }
+
+/* line 17, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_single.scss */
+.comment-respond {
+  margin: 0 auto;
+  width: 50%; }
+
+/* line 21, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_single.scss */
+.comment-form-comment {
+  display: table; }
+  /* line 23, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_single.scss */
+  .comment-form-comment label {
+    display: table-caption; }
+
+/* line 28, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_single.scss */
+.form-submit [type="submit"] {
+  margin: 0; }
+
+/*
+============ Main styles ===========
+*/
+/* line 18, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.sr-only,
+.screen-reader-text {
+  visibility: hidden;
+  display: none; }
+
+/* line 23, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.container,
+.widget-area {
+  max-width: 1200px;
+  padding: 0px 15px;
+  margin: 0 auto; }
+
+/* line 28, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.aligncenter {
+  display: block;
+  margin: 0 auto; }
+
+/* line 32, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; }
+
+/* line 37, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.col-6 {
+  flex: 1;
+  flex-basis: 100%;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+/* line 43, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.col-3 {
+  flex: 1;
+  flex-basis: 100%;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+/* line 49, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.visible-xs {
+  display: block; }
+
+/* line 52, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.hidden-xs {
+  display: none; }
+
+/* line 56, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.home .front-visible {
+  display: block !important; }
+
+/* line 59, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.home .front-hidden {
+  display: none !important; }
+
+/* line 63, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.front-hidden {
+  display: block !important; }
+
+/* line 66, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.front-visible {
+  display: none !important; }
+
+/* line 70, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.home section {
+  margin-top: 5em; }
+
+/* line 74, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.section-heading {
+  margin: 1.5em auto;
+  position: relative;
+  z-index: 999; }
+  /* line 78, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+  .section-heading:after {
+    position: absolute;
+    content: '';
+    display: block;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 20%;
+    height: 1px;
+    border-bottom: 1px solid #ddd;
+    z-index: -1; }
+
+/*
+============ Header ===========
+*/
+/* line 95, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.site-header {
+  overflow: hidden; }
+
+/* line 98, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.hero-header {
+  overflow: hidden;
+  margin-bottom: 1.5em; }
+  /* line 101, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+  .hero-header h2 {
+    margin-right: 1em; }
+
+/* line 105, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.contactBtn {
+  float: right;
+  display: block;
+  clear: both;
+  margin: 0 1em 1em 0;
+  padding: 0.2em 2em;
+  background: #ddd;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  /* line 114, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+  .contactBtn:hover {
+    box-shadow: 0 14px 20px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+/* line 118, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.hero-txt {
+  height: 100%;
+  margin: 0.8em 0 0.5em; }
+  /* line 122, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+  .hero-txt small {
+    font-size: 50%;
+    display: inline-block; }
+
+/* line 127, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.hero-amp {
+  vertical-align: bottom;
+  margin: 0 -0.3em; }
+
+/*
+============ Section Main ===========
+*/
+/* line 134, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.site-content {
+  position: relative;
+  transition: right 0.555s cubic-bezier(0.23, 1, 0.32, 1);
+  right: 0; }
+
+/* line 140, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.home .site-main {
+  border: solid 1px;
+  border-color: #ccc #ccc #63B2BB #63B2BB;
+  margin: 20px;
+  padding: 50px; }
+
+/* line 147, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.site-main {
+  border: solid 1px;
+  border-color: #ccc #ccc #63B2BB #63B2BB;
+  margin: 10px auto;
+  padding: 0 50px; }
+
+/* line 153, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.toggleMove {
+  right: 50%;
+  width: 100%; }
+
+/* line 157, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.hentry {
+  background: #ffffff;
+  position: relative;
+  border-top: 40px solid transparent;
+  border-image: url(dist/img/border.png) 60 repeat; }
+
+/*
+============ Section services ===========
+*/
+/* line 169, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.services strong {
+  display: block; }
+
+/* line 172, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.services .pricing-boxes-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  border-bottom: 1px solid #ddd; }
+
+/* line 178, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.services .icon {
+  font-size: 4.5em;
+  text-align: center;
+  height: 105px; }
+
+/* line 183, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.services .box-heading {
+  margin-top: 0; }
+
+/* line 186, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.services .box {
+  flex: 1;
+  flex-basis: 50%;
+  padding: 15px;
+  align-self: flex-end; }
+  /* line 192, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+  .services .box:nth-child(1),
+  .services .box:nth-child(3) {
+    border-right: 1px solid #ddd; }
+
+/* line 196, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.services .box-content {
+  background-color: #eee;
+  padding-left: 15px;
+  padding-right: 5px;
+  padding-bottom: 2px; }
+
+/* line 205, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.services ul {
+  padding-left: 25px; }
+
+/*
+============ Section projects ===========
+*/
+/* line 213, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.projects .projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; }
+
+/* line 218, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.projects figure {
+  flex: 1;
+  flex-basis: 50%;
+  margin: 0;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  transition: all 0.3s ease-in-out;
+  position: relative; }
+  /* line 227, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+  .projects figure:hover {
+    background: #f5f5f5; }
+  /* line 230, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+  .projects figure:nth-of-type(2n+2) {
+    border-right: none; }
+  /* line 233, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+  .projects figure img {
+    margin: 0 auto;
+    display: block; }
+
+/* line 239, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.projects figcaption {
+  background-color: #f2f2f2; }
+
+/*
+============ Totop ===========
+*/
+/* line 252, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.toTop-container {
+  display: block;
+  position: fixed;
+  bottom: 8em;
+  right: 8em; }
+
+/* line 258, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.site-toTop {
+  width: 50px;
+  height: 50px; }
+
+/*
+============ Section Footer ===========
+*/
+/*
+============ Styles for blog and single ===========
+*/
+/* line 271, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.widget-area {
+  border: solid 1px;
+  border-color: #ccc #ccc #63B2BB #63B2BB; }
+
+/* line 277, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.comments-link,
+.cat-links,
+.edit-link {
+  display: block; }
+
+/* line 281, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.cat-links a {
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative; }
+  /* line 286, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+  .cat-links a:after,
+  .cat-links a:before {
+    position: absolute;
+    content: '-';
+    display: inline-block;
+    width: 2px;
+    height: 2px; }
+  /* line 293, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+  .cat-links a:before {
+    left: 0; }
+  /* line 296, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+  .cat-links a:after {
+    right: 0px; }
+
+/* line 301, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+.more-link {
+  position: relative; }
+  /* line 303, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+  .more-link .meta-nav {
+    right: -30px;
+    position: absolute;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  /* line 309, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_custom.scss */
+  .more-link:hover .meta-nav {
+    right: -40px; }
+
+/*--------------------------------------------------------------
+# RWD
+--------------------------------------------------------------*/
+@media screen and (min-width: 768px) {
+  /*
+	============ Main styles ===========
+	*/
+  /* line 16, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_rwd.scss */
+  .visible-xs {
+    display: none; }
+  /* line 19, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_rwd.scss */
+  .hidden-xs {
+    display: block; }
+  /* line 22, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_rwd.scss */
+  .col-6 {
+    flex-basis: 50%; }
+  /* line 25, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_rwd.scss */
+  .col-3 {
+    flex-basis: 33.3%; } }
+
+@media screen and (min-width: 992px) {
+  /*
+	============ Typography ===========
+	*/
+  /* line 34, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_rwd.scss */
+  .section-heading {
+    font-size: 2.5em;
+    margin: 2.5em auto; }
+  /*
+	============ Header ===========
+	*/
+  /* line 42, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_rwd.scss */
+  .hero-header small {
+    margin-left: 7em; }
+  /* line 47, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_rwd.scss */
+  .navbar-social:not(.mobile) li {
+    float: left; }
+  /*
+	============ Section projects ===========
+	*/
+  /* line 55, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_rwd.scss */
+  .projects .projects-readMore {
+    display: block;
+    transform: translate(0, 0);
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 5px;
+    opacity: 0; }
+    /* line 61, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_rwd.scss */
+    .projects .projects-readMore:after {
+      display: block;
+      position: absolute;
+      content: '\f178';
+      bottom: 2px;
+      right: calc(30% - 45px);
+      left: auto;
+      text-align: center;
+      transform: translate(0, 0);
+      transition: transform 0.3s ease-in-out; }
+  /* line 75, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_rwd.scss */
+  .projects figure:nth-of-type(2n+2) p {
+    border-left: none; }
+  /* line 79, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_rwd.scss */
+  .projects figure p {
+    transform: translate(0, 0);
+    margin: -25px auto 15px;
+    transition: transform 0.3s ease-in-out; }
+  /* line 84, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_rwd.scss */
+  .projects figure img {
+    filter: grayscale(100%);
+    transition: all 0.3s ease-in-out;
+    transition-delay: .1s; }
+  /* line 90, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_rwd.scss */
+  .projects figure:hover p {
+    transform: translate(0, 15px);
+    color: #63B2BB; }
+  /* line 94, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_rwd.scss */
+  .projects figure:hover .projects-readMore {
+    transform: translate(0, -10px);
+    opacity: 1; }
+    /* line 98, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_rwd.scss */
+    .projects figure:hover .projects-readMore:hover:after {
+      transform: translate(10px, 0px); }
+  /* line 103, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_rwd.scss */
+  .projects figure:hover img {
+    filter: grayscale(0%); }
+  /* line 108, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_rwd.scss */
+  .projects figcaption {
+    background-color: transparent; }
+  /* line 116, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_rwd.scss */
+  .page-template-page-portfolio .projects-readMore:after {
+    right: 35%; }
+  /*
+	============ Section services ===========
+	*/
+  /* line 126, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_rwd.scss */
+  .services .box {
+    flex-basis: 25%; }
+    /* line 128, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_rwd.scss */
+    .services .box:nth-child(2) {
+      border-right: 1px solid #ddd; }
+    /* line 132, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_rwd.scss */
+    .services .box:nth-child(1),
+    .services .box:nth-child(3) {
+      border-right: 0; } }
+
+@media screen and (min-width: 1200px) {
+  /*
+	============ Header ===========
+	*/
+  /* line 144, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_rwd.scss */
+  .hero-header small {
+    margin-left: 10em; }
+  /*
+	============ Section projects ===========
+	*/
+  /* line 153, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_rwd.scss */
+  .projects-readMore:after {
+    right: 30%; }
+  /* line 161, D:/programy/Xampp/htdocs/PROJEKTY/blu/wp-content/themes/blu/sass/_rwd.scss */
+  .page-template-page-portfolio .projects-readMore:after {
+    right: 38%; } }
+
+/*# sourceMappingURL=style.css.map */

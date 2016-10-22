@@ -1,0 +1,90 @@
+/*
+============ Import headings styles ===========
+*/
+@import "headings";
+/*
+============ Main styles ===========
+*/
+body,
+button,
+input,
+select,
+textarea {
+	color: $color__text-main;
+	font-family: $font__main;
+	@include font-size($p-font-sizes);
+	line-height: $font__line-height-body;
+	font-weight: 400;
+}
+.lighter{
+	font-weight: 100;
+}
+/*
+============ Menu ===========
+*/
+.main-navigation{
+	ul li a{
+		@include font-size($menu-font-sizes);
+	}
+}
+/*
+============ Menu Social ===========
+*/
+.navbar-social.mobile{
+	.fb, .ln{
+		a{
+			font-size: 0;
+		}
+		a:before{
+			font-family: 'icomoon';
+			font-size:40px;
+			color: $color__text-main;
+			&:hover,
+			&:focus,
+			&:active{
+				color: $color__link;
+			}
+		}
+	}
+}
+/*
+============ Front-page projects ===========
+*/
+.projects figure{
+	.projects-readMore{
+		font-family: $font__other;
+		font-weight: 100;
+		font-size: 0.8em;
+		text-decoration: none;
+		color: $color__text-main;
+		&:after{
+			font-family: 'icomoon';
+			font-size: 0.8em;
+		}
+	}
+	&:hover{
+		p,
+		.projects-readMore{
+			color: $color__link;
+		}
+	}
+}		
+figcaption{
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: 100;
+}
+/*
+============ Footer ===========
+*/	
+.site-footer__design{
+	a{
+		color: $color__text-footer;	
+		text-decoration: none;	
+	}
+}
+.site-footer{	
+	color: $color__text-footer;	
+	text-align: center;
+	@include font-size($footer-font-sizes);
+}

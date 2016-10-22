@@ -1,0 +1,53 @@
+//front-page contact form
+.contact-form{
+	outline: 0;
+}
+.form-container{
+	.input-container{
+		display: flex;
+		align-items: center;
+		margin: 0 auto 1.5em;
+	}
+	label{
+		order: 1;
+		width: 4em;
+        text-align: center;
+		padding-right: 0.5em;
+		white-space: nowrap;
+		user-select: none;
+		cursor: pointer;
+		font-size: 2em;
+		transition: all 0.555s cubic-bezier(0.230, 1.000, 0.320, 1.000);
+	}
+	input{
+		height: 2em;
+	}
+	input:not([type="submit"]), textarea {
+	  order: 2;
+	  flex: 1 1 auto;
+	  border:0;
+	  border-bottom: 1px solid;
+	  transition: all 0.555s cubic-bezier(0.230, 1.000, 0.320, 1.000);
+		&::placeholder{
+			transition: all 0.8s cubic-bezier(0.230, 1.000, 0.320, 1.000);
+		}
+	}
+	/* label state styles */
+	input:focus, textarea:focus{
+		outline: 0;
+		border-bottom-color: $color__text-secondary;
+		& ~ label{
+		  color: $color__text-secondary;
+		  font-size: 1.5em;
+		}
+		&::placeholder{
+			opacity: 0;
+		}
+	}
+	div.wpcf7-validation-errors{
+		text-align: center;
+	}
+	textarea{
+		height: 5em;
+	}
+}

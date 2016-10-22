@@ -1,0 +1,80 @@
+/*!
+Theme Name: Bludesign
+Theme URI: http://bludesign.pl/
+Author: Agnieszka Gorz
+Author URI: http://bludesign.pl/
+Description: Wordpress theme developed by http://bludesign.pl/
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: blu
+Tags: custom-theme, responsive, two-columns, featured-images, custom-menu
+
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Custom mixins and variables
+# Typography
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Elements
+	## Tables
+	## Elements
+# Content
+# Font 
+# Custom
+# RWD styles
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+@import "normalize";
+/*--------------------------------------------------------------
+# Custom mixins and variables
+--------------------------------------------------------------*/
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+@import "typography/typography";
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+@import "forms/forms";
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+@import "navigation/navigation";
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+@import "elements/elements";
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+@import "site/site";
+
+/*--------------------------------------------------------------
+# Custom
+--------------------------------------------------------------*/
+@import "custom";
+
+
+/*--------------------------------------------------------------
+# RWD
+--------------------------------------------------------------*/
+@import "rwd";
+
+
+
