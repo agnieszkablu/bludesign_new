@@ -22,15 +22,13 @@ textarea {
 /*
 ============ Menu ===========
 */
-.main-navigation{
-	ul li a{
-		@include font-size($menu-font-sizes);
-	}
+.nav .nav-item a{
+	@include font-size($menu-font-sizes);
 }
 /*
 ============ Menu Social ===========
 */
-.navbar-social.mobile{
+.nav-social{
 	.fb, .ln{
 		a{
 			font-size: 0;

@@ -142,7 +142,7 @@
  	margin: 10px auto;
 	padding: 0 50px;
 }
-.toggleMove{
+.menu-toggle--move{
 	right: 50%;
     width: 100%;
 }
@@ -242,7 +242,6 @@
 ============ Totop ===========
 */
 .toTop{
-	display: block;
     position: fixed;
     bottom: 8em;
     right: 8em;

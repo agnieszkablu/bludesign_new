@@ -18,46 +18,46 @@
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
-<body id="page" class="page">
-	<header id="masthead" class="site-header container">
-		<button id="toggleAdditional" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+<body id="page">
+	<header id="page-header" class="site-header container">
+		<button id="main-toggle" class="toggle-nav" aria-controls="nav" aria-expanded="false">
 			<span class="sr-only">Toggle navigation</span>
-			<span class="menu__bar"></span>
-			<span class="menu__bar"></span>
-			<span class="menu__bar"></span>
+			<span class="toggle__bar"></span>
+			<span class="toggle__bar"></span>
+			<span class="toggle__bar"></span>
 		</button>
-		<nav id="site-navigation" class="main-navigation">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="#home"><img class="img-responsive" src="/dist/img/blu-white.png" alt="Logo image bludesign.pl"></a>
+		<nav id="site-navigation" class="main-nav">
+				<div class="main-nav__header">
+					<a class="brand" href="#page"><img class="img-responsive" src="dist/img/blu-white.png" alt="Logo image bludesign.pl"></a>
 				</div>
-				<ul id="menu-glowne-menu" class="nav navbar-nav navbar-center ">
-					<li class="scrollTo menu-item">
-						<a href="#home">Home</a>
+				<ul class="nav">
+					<li class="nav-item scrollTo">
+						<a href="#page">Home</a>
 					</li>
-					<li class="scrollTo front-visible menu-item">
+					<li class="nav-item scrollTo front-visible">
 						<a href="#services">Usługi</a>
 					</li>
-					<li class="scrollTo front-visible menu-item">
+					<li class="nav-item scrollTo front-visible">
 						<a href="#projects">Realizacje</a>
 					</li>
-					<li class="scrollTo front-visible menu-item">
-						<a href="#ContactForm">Kontakt</a>
+					<li class="nav-item scrollTo front-visible">
+						<a href="#contactForm">Kontakt</a>
 					</li>
-					<li class="front-hidden menu-item">
-						<a href="#kontakt">Kontakt</a>
+					<li class="nav-item scrollTo front-hidden">
+						<a href="#contact">Kontakt</a>
 					</li>
-					<li  class="menu-item">
+					<li  class="nav-item">
 						<a href="http://bludesign.pl/blog/">Blog</a>
 					</li>
 				</ul>
-				<ul id="menu-social-menu" class="navbar-social mobile">
-					<li class="fb menu-item">
+				<ul class="nav-social">
+					<li class="nav-item fb">
 						<a href="http://facebook.com">Facebook</a>
 					</li>
-					<li class="linkedin menu-item">
+					<li class="nav-item ln">
 						<a href="http://linkedin.com">Linkedin</a>
 					</li>
 				</ul>
 		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+	</header><!-- #page-header -->
 	<div id="content" class="site-content">

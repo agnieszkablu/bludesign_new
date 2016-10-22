@@ -5,24 +5,19 @@
  * support for dropdown menus.
  */
 ( function() {
-	var container, button, menu, links, subMenus, i, len, siteContent, button2;
+	var container, button, menu, links, subMenus, i, len, siteContent;
 	siteContent = document.getElementById( 'content' );
 	container = document.getElementById( 'site-navigation' );
-	button2 = document.getElementById( 'toggleAdditional' );
+	button = document.getElementById( 'main-toggle' );
 	if ( ! container ) {
 		return;
 	}
-
-//	button = container.getElementsByTagName( 'button' )[0];
-//	if ( 'undefined' === typeof button ) {
-//		return;
-//	}
 
 	menu = container.getElementsByTagName( 'ul' )[0];
 
 	// Hide menu toggle button if menu is empty and return early.
 	if ( 'undefined' === typeof menu ) {
-		button2.style.display = 'none';
+		button.style.display = 'none';
 		return;
 	}
 
@@ -31,18 +26,18 @@
 		menu.className += ' nav-menu';
 	}
 	
-	button2.onclick = function() {
+	button.onclick = function() {
 		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
 			container.className = container.className.replace( ' toggled', '' );
-			button2.setAttribute( 'aria-expanded', 'false' );
-			button2.className = button2.className.replace( ' toggleAdditional', '' );
+			button.setAttribute( 'aria-expanded', 'false' );
+			button.className = button.className.replace( ' menu-toggle--fixed', '' );
 			menu.setAttribute( 'aria-expanded', 'false' );
-			siteContent.className = siteContent.className.replace( ' toggleMove', '' );
+			siteContent.className = siteContent.className.replace( ' menu-toggle--move', '' );
 		} else {
-			siteContent.className += ' toggleMove';
+			siteContent.className += ' menu-toggle--move';
 			container.className += ' toggled';
-			button2.setAttribute( 'aria-expanded', 'true' );
-			button2.className += ' toggleAdditional';
+			button.setAttribute( 'aria-expanded', 'true' );
+			button.className += ' menu-toggle--fixed';
 			menu.setAttribute( 'aria-expanded', 'true' );
 		}
 	};
