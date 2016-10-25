@@ -1,9 +1,23 @@
 .portfolio{
 	.section-header{
 		margin-bottom: 3.5em;
+		//position: relative;
 		h3{
 			margin-top: 10px;
 		}
+		// &::after{
+		// 	position: absolute;
+		// 	content: '';
+		// 	display: block;
+		//     right: 0;
+		//     left: 0;
+		//     z-index: 10;
+		//     display: block;
+		//     height: 90px;
+		//     background-size: 50px 100%;
+		// 	background-position: 50%;
+		// background-image: linear-gradient(to bottom right, #3498db 25%, transparent 25%), linear-gradient(to bottom left, #3498db 25%, transparent 25%);
+		// }
 	}
 	.section-heading{
 		margin: 1.5em auto 0;

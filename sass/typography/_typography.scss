@@ -39,7 +39,7 @@ textarea {
 		a{
 			font-size: 0;
 		}
-		a:before{
+		a::before{
 			font-family: 'icomoon';
 			font-size:40px;
 			color: $color__text-main;
@@ -60,7 +60,7 @@ textarea {
 		font-size: 0.8em;
 		text-decoration: none;
 		color: $color__text-main;
-		&:after{
+		&::after{
 			font-family: 'icomoon';
 			font-size: 0.8em;
 		}

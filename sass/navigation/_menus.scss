@@ -45,8 +45,7 @@
 		a {
 			text-decoration: none;
 		}
-		&:before,
-		&:after{
+		&::after{
 			position: absolute;
 			content: '';
 			display: block;
@@ -60,7 +59,7 @@
 			height: 50px;
 			background-color: $color__text-main;
 		}
-		&:after{
+		&::after{
 			bottom: -65px;
 			top: auto;
 		}

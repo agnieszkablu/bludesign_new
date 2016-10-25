@@ -39,7 +39,7 @@
 			position: relative;
 			color: transparent !important;
 			transition: .3s all;
-			&:before{
+			&::before{
 				display: inline-block;
 				position: absolute;
 				top: 0;
@@ -48,7 +48,7 @@
 				color: $color__background-divider;
 			}
 			&:hover{
-				&:before{
+				&::before{
 					color: $color__text-plain;
 				}
 			}
@@ -56,14 +56,14 @@
 	}
 	.fb{
 		a{
-			&:before{
+			&::before{
 				content: "\e05d";
 			}
 		}
 	}
 	.ln{
 		a{
-			&:before{
+			&::before{
 				left: 60px;
 				content: "\e062";
 			}	

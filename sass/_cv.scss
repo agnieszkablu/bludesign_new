@@ -40,8 +40,8 @@
 		position: relative;
 		display: block;
 		border-bottom: $color__cv solid 4px;
-		&:after,
-		&:before{
+		&::after,
+		&::before{
 			position: absolute;
 			content: '';
 			display: block;
@@ -51,10 +51,10 @@
 			width: 20px;
 			height: 20px;
 		}
-		&:after{
+		&::after{
 			left: -5px;	
 		}
-		&:before{
+		&::before{
 			right: -5px;
 		}
 	}
@@ -73,7 +73,7 @@
 			right: 50px;
 			left: auto;
 		}
-		&:after{
+		&::after{
 			position: absolute;
 			content: '';
 			display: block;
@@ -107,8 +107,11 @@
 	.icon-angle-double-up{
 		text-shadow: none;
 	}
+	.site-main{
+		margin: 10px auto;
+    	padding: 0 50px;
+	}
 }
-
 .cv-content{
 	a{
 		color: currentColor;
