@@ -28,7 +28,7 @@ module.exports = function( grunt ) {
 			dist: {
 				src: [
 					'js/navigation.js',
-					'js/script.js'					
+					'js/script.js'									
 				],
 				dest: 'dist/js/script.js'
 			}

@@ -82,21 +82,22 @@
 
 //jQuery
 jQuery(document).ready(function($) {
+		
+	/*
+	============ Scroll functions ===========
+	*/
 	
-/*
-============ To top link ===========
-*/
-//Check to see if the window is top if not then display button
 	$( window ).scroll( function (){
+
+		//Check to see if the window is top if not then display button
 		if ($( this ).scrollTop() > 1000) {
-			$( '#toTopLink' ).fadeIn();
+			$( '#toTopBtn' ).fadeIn();
 		} else {
-			$( '#toTopLink' ).fadeOut();
+			$( '#toTopBtn' ).fadeOut();
 		}
 	});
-
 	//Click event to scroll to top
-	$( '#toTopLink' ).click( function(){
+	$( '#toTopBtn' ).click( function(){
 		$( 'html, body' ).animate({
 			scrollTop : 0
 		},800);
@@ -105,7 +106,6 @@ jQuery(document).ready(function($) {
 	/*
 	============ Click event to scroll to point ===========
 	*/
-	
 	function scrollToPoint(){
 		$( 'html, body' ).animate({
 				scrollTop: $( $.attr( this, 'href' ) ).offset().top
@@ -118,6 +118,8 @@ jQuery(document).ready(function($) {
 	/*
 	============ CV skills set ===========
 	*/
+
+
 	var tableCells = $( '.skill-bullet' ),
 		tableCellsData;
 	tableCells.each( function () {
@@ -135,6 +137,29 @@ jQuery(document).ready(function($) {
 		}
 	});		
 });
+//If elements on portfolio (use visible.js plugin) are already visible, let them be
+var win = $(window);
+var allMods = $('.projects-figure');
+
+// Already visible projects-figures
+allMods.each(function(i, el) {
+  var el = $(el);
+  if (el.visible(true)) {
+    el.addClass('already-visible'); 
+  } 
+});
+
+win.scroll(function(event) {
+  
+  allMods.each(function(i, el) {
+    var el = $(el);
+    if (el.visible(true)) {
+      el.addClass('slide-up'); 
+    } 
+  });
+  
+});
+
 /*
 ============ Portfolio ( on both portfolio and home page ) ===========
 */

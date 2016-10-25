@@ -46,25 +46,15 @@ h3{
   font-style: italic;
 }
 .section-heading{
-	text-align: center;
+	text-align: left;
+	text-transform: uppercase;;
+	margin: 1.5em auto 0.5em;
+	border-bottom: solid 3px $color__link;
 }
-/*
-============ blog headers ===========
-*/
-.post-hero-heading{
-	font-size: 2.8em;
-}
-.blog{
-	h2.entry-title{
-		a{
-			@include font-size($h1-font-sizes);
-			color: $color__headings;
-			font-family: $font__header;
-			font-weight: 600;
-			text-decoration: none;
-			&:hover{
-				text-decoration: underline;
-			}
-		}
+@media screen and (min-width: 992px) {
+		//Desktop
+	.section-heading{
+		font-size: 2.5em;
+		margin: 2.5em auto 1.5em;
 	}
 }

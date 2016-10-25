@@ -20,9 +20,8 @@ blockquote, q {
 		content: "";
 	}
 }
-
 hr {
-	background-color: $color__background-hr;
+	background-color: $color__background-divider;
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;
@@ -32,6 +31,12 @@ hr {
 img {
 	height: auto; /* Make sure images are scaled correctly. */
 	max-width: 100%; /* Adhere to container width. */
+}
+button{
+	background: none;
+	border:0;
+	box-shadow: none;
+	outline: 0;
 }
 @import "icons";
 @import "tables";

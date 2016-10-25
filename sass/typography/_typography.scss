@@ -19,10 +19,16 @@ textarea {
 .lighter{
 	font-weight: 100;
 }
+.toTop__btn{
+	span{
+		font-size: 2.5em;
+		color: #000;
+	}
+}
 /*
 ============ Menu ===========
 */
-.nav .nav-item a{
+.nav a{
 	@include font-size($menu-font-sizes);
 }
 /*
@@ -50,7 +56,6 @@ textarea {
 */
 .projects figure{
 	.projects-readMore{
-		font-family: $font__other;
 		font-weight: 100;
 		font-size: 0.8em;
 		text-decoration: none;
@@ -69,8 +74,13 @@ textarea {
 }		
 figcaption{
     text-align: center;
-    font-size: 1.6em;
+    font-size: 1.4em;
     font-weight: 100;
+}
+.portfolio{
+	figcaption{
+	    font-size: 1.1em;
+	}
 }
 /*
 ============ Footer ===========

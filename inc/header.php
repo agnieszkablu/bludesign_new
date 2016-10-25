@@ -1,26 +1,26 @@
+<?php require ('functions.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<meta name="author" content="bludesign.pl" /> 
-<meta name="publisher" content="Agnieszka Gorz - www.bludesign.pl" /> 
-<meta name="robots" content="noindex,nofollow" /> 
-<meta name="googlebot" content="noindex,nofollow" />
-<meta name="coverage" content="worldwide" /> 
-<meta name="rating" content="general" /> 
-<meta name="revisit-after" content="2 days" />
-<title>bludesign.pl &#8211; webdesign</title>
-	<!-- Custom styles for this template -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<meta name="author" content="bludesign.pl" /> 
+	<meta name="publisher" content="Agnieszka Gorz - www.bludesign.pl" /> 
+	<meta name="robots" content="noindex,nofollow" /> 
+	<meta name="googlebot" content="noindex,nofollow" />
+	<meta name="coverage" content="worldwide" /> 
+	<meta name="rating" content="general" /> 
+	<meta name="revisit-after" content="2 days" />
+	<title>bludesign.pl &#8211; webdesign</title>
     <link href="dist/css/style.css" rel="stylesheet">
- <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 </head>
-<body id="page">
+<body id="page" class="<?php echo $page ?>">
 	<header id="page-header" class="site-header container">
-		<button id="main-toggle" class="toggle-nav" aria-controls="nav" aria-expanded="false">
+		<button id="main-toggle" class="toggle-nav" aria-controls="main-nav" aria-expanded="false">
 			<span class="sr-only">Toggle navigation</span>
 			<span class="toggle__bar"></span>
 			<span class="toggle__bar"></span>
@@ -34,16 +34,16 @@
 					<li class="nav-item scrollTo">
 						<a href="#page">Home</a>
 					</li>
-					<li class="nav-item scrollTo front-visible">
+					<li class="nav-item scrollTo visible-home">
 						<a href="#services">Usługi</a>
 					</li>
-					<li class="nav-item scrollTo front-visible">
+					<li class="nav-item scrollTo visible-home">
 						<a href="#projects">Realizacje</a>
 					</li>
-					<li class="nav-item scrollTo front-visible">
+					<!-- <li class="nav-item scrollTo visible-home">
 						<a href="#contactForm">Kontakt</a>
-					</li>
-					<li class="nav-item scrollTo front-hidden">
+					</li> -->
+					<li class="nav-item scrollTo home-hidden">
 						<a href="#contact">Kontakt</a>
 					</li>
 					<li  class="nav-item">

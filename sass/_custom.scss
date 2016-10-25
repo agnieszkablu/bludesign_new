@@ -2,6 +2,10 @@
 # Resume styles
 --------------------------------------------------------------*/
 @import "cv";
+/*--------------------------------------------------------------
+# portfolio styles
+--------------------------------------------------------------*/
+@import "portfolio";
 
 /*
 ============ Main styles ===========
@@ -44,41 +48,23 @@
 .hidden-xs{
 	display: none;
 }
-.home{
-	.front-visible{
+.default{
+	.visible-home{
 		display: block !important;
 	}
-	.front-hidden{
+	.hidden-home{
 		display: none !important;
 	}
 }
-.front-hidden{
+.hidden-home{
 	display: block !important;
 }
-.front-visible{
+.visible-home{
 	display: none !important;
 }
-.home{
+.default{
 	section{
 		margin-top: 5em;
-	}
-}
-.section-heading{
-	margin: 1.5em auto;
-	position: relative;
-	z-index: 999;
-	&:after{
-		position: absolute;
-		content: '';
-		display: block;
-		bottom: 15px;
-		left: 0;
-		right: 0;
-		margin: 0 auto;
-		width: 20%;
-		height: 1px;
-		border-bottom: 1px solid $color__background-hr;
-		z-index: -1;
 	}
 }
 /*
@@ -110,7 +96,7 @@
 .hero-txt{
 	height: 100%;
 	margin: .8em 0 0.5em;
-    //border-bottom: solid $color__background-hr 1px;
+    //border-bottom: solid $color__background-divider 1px;
 	small {
 		font-size: 50%;
 		display: inline-block;
@@ -120,39 +106,33 @@
 	vertical-align: bottom;
   	margin: 0 -0.3em;
 }
+
+
+
+
 /*
 ============ Section Main ===========
 */
 .site-content{
 	position: relative;
-	transition: right 0.555s cubic-bezier(0.230, 1.000, 0.320, 1.000);
-	right: 0;
-}
-.home{
-	.site-main{
-		border: solid  1px;
-		border-color: $color__border;
-		margin: 20px;
-		padding: 50px;
-	}
+	transition: transform 0.555s cubic-bezier(0.230, 1.000, 0.320, 1.000);
+	transform: translate(0,0);
 }
 .site-main{
 	border: solid  1px;
 	border-color: $color__border;
- 	margin: 10px auto;
-	padding: 0 50px;
+ 	margin: 20px;
+	padding: 50px;
 }
 .menu-toggle--move{
-	right: 50%;
+	transform: translate(-40%,0);
     width: 100%;
 }
-.hentry{
+.main-content{
 	background: $color__background-body;
     position: relative;
-	//border-top: solid $color__background-hr 1px;
 	border-top: 40px solid transparent;
-//	border-image: url(dist/img/border.png) 100 fill repeat;
-	border-image: url(dist/img/border.png) 60 repeat;
+	border-image: url(../img/border.png) 60 repeat;
 }
 /*
 ============ Section services ===========
@@ -165,7 +145,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: row;
-		border-bottom: 1px solid $color__background-hr;
+		border-bottom: 1px solid $color__background-divider;
 	}
 	.icon{
 		font-size: 4.5em;
@@ -182,7 +162,7 @@
 		align-self: flex-end;
 		&:nth-child(1), 
 		&:nth-child(3){
-			border-right: 1px solid $color__background-hr;
+			border-right: 1px solid $color__background-divider;
 		}
 	}
 	.box-content{
@@ -212,8 +192,8 @@
 		flex-basis: 50%;
 		margin: 0;
 		background-color: #fff;
-		border-bottom: 1px solid $color__background-hr;
-		border-right: 1px solid $color__background-hr;
+		border-bottom: 1px solid $color__background-divider;
+		border-right: 1px solid $color__background-divider;
 		transition: all 0.3s ease-in-out;
 		position: relative;
 		&:hover{
@@ -226,10 +206,26 @@
 			margin: 0 auto;
    		 	display: block;
 		}
-		
 	}
 	figcaption{
-		background-color: #f2f2f2;
+		//background-color: #f2f2f2;
+	}
+}
+// projects figures animation
+.slide-up{
+	transform: translateY(350px);
+	animation: slide-up 1s ease forwards;
+	&:nth-child(odd){
+		animation-duration: 0.7s; /* So they look staggered */
+	}
+}
+.already-visible {
+  transform: translateY(0);
+  animation: none;
+}
+@keyframes slide-up {
+	to {
+		transform: translateY(0);
 	}
 }
 /*
@@ -245,11 +241,9 @@
     position: fixed;
     bottom: 8em;
     right: 8em;
-}
-.toTop__link{
-	display: none;		
-}
-.toTop__svg{
-	width: 50px;
+    width: 50px;
 	height: 50px;
+}
+.toTop__btn{
+	display: none;		
 }

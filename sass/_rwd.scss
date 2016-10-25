@@ -27,14 +27,6 @@
 	}
 }
 @media screen and (min-width: 992px) {
-					//Desktop
-	/*
-	============ Typography ===========
-	*/
-	.section-heading{
-		font-size: 2.5em;
-		margin: 2.5em auto;
-	}
 	/*
 	============ Header ===========
 	*/
@@ -78,17 +70,18 @@
 			}
 			p{
 				transform: translate(0,0);
-				margin: -25px auto 15px;
+				margin: -15px auto 15px;
 				transition: transform 0.3s ease-in-out;
 			}
 			img{
 				filter: grayscale(100%);
-				transition: all .3s ease-in-out;
+				transform: scale(1);
+				transition: filter .3s ease-in-out, transform .5s ease-in-out;
 				transition-delay: .1s;
 			}
 			&:hover{
 				p{
-					transform: translate(0,15px);
+					transform: translate(0,8px);
 					color: $color__link;
 				}
 				.projects-readMore{
@@ -102,6 +95,7 @@
 				}
 				img{
 					filter: grayscale(0%);
+					transform: scale(1.002);	
 				}
 			}
 		}
@@ -110,13 +104,13 @@
 		}
 
 	}
-	// Portfolio custom style
-	.page-template-page-portfolio{
+	// portfolio page specific style for arrow
+	.portfolio{
 		.projects-readMore{
-				&:after{
-					right: 35%;
-				}
+			&:after{
+				right: calc(40% - 15px);
 			}
+		}
 	}
 	/*
 	============ Section services ===========
@@ -126,7 +120,7 @@
 		.box{
 			flex-basis: 25%;
 			&:nth-child(2){
-				border-right: 1px solid $color__background-hr;
+				border-right: 1px solid $color__background-divider;
 			}
 			&:nth-child(1), 
 			&:nth-child(3){
@@ -134,7 +128,6 @@
 			}
 		}
 	}
-
 }
 @media screen and (min-width: 1200px) {
 	/*
@@ -148,19 +141,12 @@
 	/*
 	============ Section projects ===========
 	*/
-
-	.projects-readMore{
-		&:after{
-			right: 30%;
-		}
-	}	
-
-	// Portfolio custom style
-	.page-template-page-portfolio{
+	//home page specific style for arrow
+	.default {
 		.projects-readMore{
-				&:after{
-					right: 38%;
-				}
+			&:after{
+				right: 35%;
 			}
+		}	
 	}
 }

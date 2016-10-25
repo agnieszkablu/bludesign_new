@@ -99,14 +99,16 @@
 	}
 }
 // Content
-.page-template-page-cv{
+.resume{
 	[class*=" icon-"], [class^=icon-]{
 		text-shadow: 1px 1px 1px #000;
 	}
-	.icon-heart{
+	.icon-heart,
+	.icon-angle-double-up{
 		text-shadow: none;
 	}
 }
+
 .cv-content{
 	a{
 		color: currentColor;
@@ -144,10 +146,10 @@
 	//transition: all 0.2s cubic-bezier(.25,.8,.25,1);
 }
 .skill-bullet-empty{
-	background-image: url(dist/img/bullet-empty.png);
+	background-image: url(../img/bullet-empty.png);
 }
 .skill-bullet-full{
-	background-image: url(dist/img/bullet.png);
+	background-image: url(../img/bullet.png);
 }
 // Passions hobbies and contact
 .cv-hobby, .cv-social{

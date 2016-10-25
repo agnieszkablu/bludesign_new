@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php require('inc/header.php'); ?>
 <div class="container">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -7,10 +7,10 @@
 			</article>
 			<article id="" class="">
 				<section class="entry-content">
-					
+					<?php //require('projects/header.php'); ?>
 				</section><!-- .entry-content -->
 			</article><!-- #post-## -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 </div><!-- .container -->
-<?php get_footer(); ?>
+<?php require('inc/footer.php'); ?>
