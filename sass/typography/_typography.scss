@@ -55,7 +55,7 @@ textarea {
 ============ Front-page projects ===========
 */
 .projects figure{
-	.projects-readMore{
+	.projects__readMore{
 		font-weight: 100;
 		font-size: 0.8em;
 		text-decoration: none;
@@ -67,7 +67,7 @@ textarea {
 	}
 	&:hover{
 		p,
-		.projects-readMore{
+		.projects__readMore{
 			color: $color__link;
 		}
 	}

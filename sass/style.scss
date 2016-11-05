@@ -25,10 +25,12 @@ Tags: custom-theme, responsive, two-columns, featured-images, custom-menu
 # Elements
 	## Tables
 	## Elements
+	## Clouds
 # Content
 # Font 
 # Custom
 # RWD styles
+
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Normalize
@@ -66,6 +68,10 @@ Tags: custom-theme, responsive, two-columns, featured-images, custom-menu
 --------------------------------------------------------------*/
 @import "custom";
 
+/*--------------------------------------------------------------
+# Clouds
+--------------------------------------------------------------*/
+@import "elements/clouds";
 
 /*--------------------------------------------------------------
 # RWD

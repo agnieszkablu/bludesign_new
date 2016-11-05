@@ -2,17 +2,11 @@
 <?php require('inc/header.php'); ?>
 	<main id="main" class="site-main">
 		<section class="hero-header container rellax" data-rellax-speed="-7">
+
 			<h1 class="hero__txt">Coding <span class="hero__amp">&amp;</span> Design <small>bludesign.pl</small></h1>
 			<h2>Tworzenie stron internetowych to moja pasja,<br>
 			skontaktuj się ze mną i wyróżnij się w sieci</h2>
 			<a id="contactBtn" class="hero__contact" href="#ContactForm">Kontakt</a>
-			<div id="clouds" class="hero__clouds">
-				<div class="cloud cloud--x1"></div>
-				<div class="cloud cloud--x2"></div>
-				<div class="cloud cloud--x3"></div>
-				<div class="cloud cloud--x4"></div>
-				<div class="cloud cloud--x5"></div>
-			</div>
 		</section>
 		<section class="main-content">
 			<article id="services" class="services container">
@@ -23,7 +17,7 @@
 						<strong>Napisz do mnie by poznać nową jakość stron internetowych!</strong></p>
 				</header>
 				<div class="pricing-boxes">
-					<div class="box box-1">
+					<div class="box">
 						<div class="icon icon-streetsign"></div>
 						<div class="box__content">
 							<h3 class="box__heading">Pakiet podstawowy</h3>
@@ -35,7 +29,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="box box-2">
+					<div class="box">
 						<div class="icon icon-gears"></div>
 						<div class="box__content">
 							<h3 class="box__heading">Pakiet rozszerzony</h3>
@@ -48,7 +42,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="box box-3">
+					<div class="box">
 						<div class="icon icon-layers"></div>
 						<div class="box__content">
 							<h3 class="box__heading">Pakiet premium</h3>
@@ -61,7 +55,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="box box-4">
+					<div class="box">
 						<div class="icon icon-tools"></div>
 						<div class="box__content">
 							<h3 class="box__heading">Dodatki</h3>
@@ -91,7 +85,7 @@
 						</a>
 						<figcaption>
 							<p>Projekt i realizacja, strona firmowa agencji reklamowej</p>
-							<a class="projects-readMore" href="/projects/hart-media/">Dowiedz się więcej</a>
+							<a class="projects__readMore" href="/projects/hart-media/">Dowiedz się więcej</a>
 						</figcaption>
 					</figure>
 					<figure>
@@ -100,7 +94,7 @@
 						</a>
 						<figcaption>
 							<p>Projekt i realizacja, strona dla podróżnika, eurotrotter.eu</p>
-							<a class="projects-readMore" href="/projects/eurotrotter/">Dowiedz się więcej</a>
+							<a class="projects__readMore" href="/projects/eurotrotter/">Dowiedz się więcej</a>
 						</figcaption>
 					</figure>
 					<figure>
@@ -109,7 +103,7 @@
 						</a>
 						<figcaption>
 							<p>Projekt i realizacja, drukarnia, uvdruk.com</p>
-							<a class="projects-readMore" href="/projects/uvdruk/">Dowiedz się więcej</a>
+							<a class="projects__readMore" href="/projects/uvdruk/">Dowiedz się więcej</a>
 						</figcaption>
 					</figure>
 					<figure>
@@ -118,7 +112,7 @@
 						</a>
 						<figcaption>
 							<p>Projekt i realizacja, sklep Woocommerce, dojazdowa.pl</p>
-							<a class="projects-readMore" href="/projects/sklep-dojazdowa/">Dowiedz się więcej</a>
+							<a class="projects__readMore" href="/projects/sklep-dojazdowa/">Dowiedz się więcej</a>
 						</figcaption>
 					</figure>
 					<figure>
@@ -127,7 +121,7 @@
 						</a>
 						<figcaption>
 							<p>Projekt i realizacja, prezentacja produktów, dojazdowa.pl</p>
-							<a class="projects-readMore" href="/projects/sony-centre/">Dowiedz się więcej</a>
+							<a class="projects__readMore" href="/projects/sony-centre/">Dowiedz się więcej</a>
 						</figcaption>
 					</figure>
 					<figure>
@@ -136,7 +130,7 @@
 						</a>
 						<figcaption>
 							<p>Projekt i realizacja, strona producenta masła orzechowego</p>
-							<a class="projects-readMore" href="/projects/peanutbutter/">Dowiedz się więcej</a>
+							<a class="projects__readMore" href="/projects/peanutbutter/">Dowiedz się więcej</a>
 						</figcaption>
 					</figure>
 				</div>

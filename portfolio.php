@@ -17,7 +17,7 @@
 							</a>
 							<figcaption>
 								<p>Design and coding for a marketing agency</p>
-								<a class="projects-readMore" href="/hart-media/">Learn more</a>
+								<a class="projects__readMore" href="/hart-media/">Learn more</a>
 							</figcaption>
 						</figure>
 						<figure>
@@ -26,7 +26,7 @@
 							</a>
 							<figcaption>
 								<p>Design and coding, eurotrotter.eu</p>
-								<a class="projects-readMore" href="/eurotrotter/">Learn more</a>
+								<a class="projects__readMore" href="/eurotrotter/">Learn more</a>
 							</figcaption>
 						</figure>
 						<figure>
@@ -35,7 +35,7 @@
 							</a>
 							<figcaption>
 								<p>Design and coding, printing office, uvdruk.com</p>
-								<a class="projects-readMore" href="/uvdruk/">Learn more</a>
+								<a class="projects__readMore" href="/uvdruk/">Learn more</a>
 							</figcaption>
 						</figure>
 						<figure>
@@ -44,7 +44,7 @@
 							</a>
 							<figcaption>
 								<p>Design and coding, Woocommerce shop, dojazdowa.pl</p>
-								<a class="projects-readMore" href="/sklep-dojazdowa/">Learn more</a>
+								<a class="projects__readMore" href="/sklep-dojazdowa/">Learn more</a>
 							</figcaption>
 						</figure>
 						<figure>
@@ -53,7 +53,7 @@
 							</a>
 							<figcaption>
 								<p>Design and coding, products presentation page, dojazdowa.pl</p>
-								<a class="projects-readMore" href="/sony-centre/">Learn more</a>
+								<a class="projects__readMore" href="/sony-centre/">Learn more</a>
 							</figcaption>
 						</figure>
 						<figure>

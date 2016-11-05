@@ -40,9 +40,6 @@
 					<li class="nav-item scrollTo visible-home">
 						<a href="#projects">Realizacje</a>
 					</li>
-					<!-- <li class="nav-item scrollTo visible-home">
-						<a href="#contactForm">Kontakt</a>
-					</li> -->
 					<li class="nav-item scrollTo home-hidden">
 						<a href="#contact">Kontakt</a>
 					</li>
@@ -61,3 +58,13 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #page-header -->
 	<div id="content" class="site-content">
+	<div id="clouds" class="hero-clouds cv-hidden">
+		<div class="cloud cloud--x1"></div>
+		<div class="cloud cloud--x2"></div>
+		<div class="cloud cloud--x3"></div>
+		<div class="cloud cloud--x4"></div>
+		<div class="cloud cloud--x5"></div>
+		<div class="cloud cloud--x6"></div>
+		<div class="cloud cloud--x7"></div>
+		<div class="cloud cloud--x8"></div>
+	</div>
