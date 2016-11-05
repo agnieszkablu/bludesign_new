@@ -30,7 +30,7 @@ jQuery(document).ready(function($) {
 			}, 500 );
 			return false;
 	}
-	$( '.contactBtn' ).click( scrollToPoint );
+	$( '#contactBtn' ).click( scrollToPoint );
 	$( '.scrollTo a' ).click( scrollToPoint );
 	
 	/*
@@ -75,7 +75,6 @@ win.scroll(function(event) {
       el.addClass('slide-up'); 
     } 
   });
-  
 });
 
 /*

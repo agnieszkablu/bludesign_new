@@ -26,7 +26,7 @@ h3{
 		@include font-size($h3-font-sizes);
 	}
 }
-.contactBtn{
+.hero__contact{
 	@include font-size($h3-font-sizes);
 	text-decoration: none;
 	&:hover{
@@ -34,18 +34,18 @@ h3{
 		color: $color__link;
 	}
 }
-.hero-txt{
+.hero__txt{
     line-height: 1em;
     font-size: 5.5em;
     font-weight: 100;
 	text-align: center;
 }
-.hero-amp{
+.hero__amp{
   color: lighten($color__link, 20);//$color__headings-smaller;
   font-size: 3em;
   font-style: italic;
 }
-.section-heading{
+.content__heading{
 	text-align: left;
 	text-transform: uppercase;;
 	margin: 1.5em auto 0.5em;
@@ -53,7 +53,7 @@ h3{
 }
 @media screen and (min-width: 992px) {
 		//Desktop
-	.section-heading{
+	.content__heading{
 		font-size: 2.5em;
 		margin: 2.5em auto 1.5em;
 	}

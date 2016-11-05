@@ -1,10 +1,13 @@
 		<footer id="contact" class="site-footer container">
 			<ul class="site-footer__menu">
-				<li class="fb menu__item">
-					<a href="http://facebook.com/bludesignpl">Facebook</a>
+				<li class="fb menu__item visible-home">
+					<a href="http://facebook.com/bludesignpl" target="_blank">Facebook</a>
+				</li>
+				<li class="git menu__item hidden-home">
+					<a href="https://github.com/agnieszkablu" target="_blank">GitHub</a>
 				</li>
 				<li class="ln menu__item">
-					<a href="https://pl.linkedin.com/in/agnieszkagorz">Linkedin</a>
+					<a href="https://pl.linkedin.com/in/agnieszkagorz" target="_blank">Linkedin</a>
 				</li>
 			</ul>
 			<div class="site-footer__address">
@@ -12,7 +15,7 @@
 				<address class="hidden-home">Email: <a href="mailto:agnieszka.gorz@outlook.com">agnieszka.gorz@outlook.com</a><br>Skype chat: <a href="skype:agnieszka.gorz?chat">agnieszka.gorz</a></address>
 			</div><!-- .site-footer__address -->
 			<div class="site-footer__design">
-				<p>MADE with <span class="icon icon-heart"></span> by <a href="http://bludesign.pl/">bludesign.pl</a> 2016 &copy;</p>
+				<p>MADE with <span class="icon icon-heart"></span> by <a href="http://bludesign.pl/" target="_blank">bludesign.pl</a> 2016 &copy;</p>
 			</div><!-- .site-footer__design -->
 		</footer><!-- .site-footer -->
 		<div class="toTop">
