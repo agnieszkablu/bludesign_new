@@ -48,13 +48,13 @@ h3{
 .content__heading{
 	text-align: left;
 	text-transform: uppercase;;
-	margin: 1.5em auto 0.5em;
+	margin: 1.5em auto;
 	border-bottom: solid 3px $color__link;
 }
 @media screen and (min-width: 992px) {
 		//Desktop
 	.content__heading{
 		font-size: 2.5em;
-		margin: 2.5em auto 1.5em;
+		margin: 2em auto 1.5em;
 	}
 }

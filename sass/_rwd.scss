@@ -25,6 +25,27 @@
 	.col-3{
 		flex-basis: calc(100% / 3);
 	}
+	.site-main{
+		padding: 50px;
+	}
+	/*
+	============ Section services ===========
+	*/
+	.services{
+		.box{
+			flex-basis: 50%;
+			&:nth-child(1), 
+			&:nth-child(3){
+				border-right: 1px solid $color__background-divider;
+			}
+		}
+	}
+	/*
+	============ Totop ===========
+	*/
+	.toTop{
+	    right: 8em;
+	}
 }
 @media screen and (min-width: 992px) {
 	/*
@@ -120,6 +141,19 @@
 			margin-left: 10em;
 		}
 	}
+	/*
+	============ Section projects ===========
+	*/
+	//home page specific style for arrow
+	.default {
+		.projects__readMore{
+			&::after{
+				right: 30%;
+			}
+		}	
+	}
+}
+@media screen and (min-width: 1600px) {
 	/*
 	============ Section projects ===========
 	*/

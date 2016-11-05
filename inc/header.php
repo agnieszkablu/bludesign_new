@@ -58,7 +58,8 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #page-header -->
 	<div id="content" class="site-content">
-	<div id="clouds" class="hero-clouds cv-hidden">
+	<div id="sky" class="hero-sky">
+		<div class="moon"></div>
 		<div class="cloud cloud--x1"></div>
 		<div class="cloud cloud--x2"></div>
 		<div class="cloud cloud--x3"></div>

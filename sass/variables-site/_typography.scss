@@ -10,82 +10,82 @@ $font__line-height-pre: 1.6;
 
 //Responsive font-sizes map
 $breakpoints: (
-  smallest: 360px,
-  small : 414px,
-  medium: 600px,
-  large : 768px,
-  larger: 992px,
-  main : 1200px,
-  big : 1600px
+	smallest: 360px,
+	small : 414px,
+	medium: 600px,
+	large : 768px,
+	larger: 992px,
+	main : 1200px,
+	big : 1600px
 );
 
 $p-font-sizes: (
-  null  : 10px,
-  smallest: 12px,
-  small : 12px,
-  medium: 14px,
-  large : 16px,
-  larger: 18px,
-  main: 20px,
-  big: 20px
+	null  : 10px,
+	smallest: 12px,
+	small : 12px,
+	medium: 14px,
+	large : 16px,
+	larger: 18px,
+	main: 20px,
+	big: 20px
 );
 $footer-font-sizes: (
-  null  : 10px,
-  smallest:10px,
-  small : 10px,
-  medium: 10px,
-  large : 12px,
-  larger: 12px,
-  main: 14px,
-  big: 14px
+	null  : 10px,
+	smallest:10px,
+	small : 10px,
+	medium: 10px,
+	large : 12px,
+	larger: 12px,
+	main: 14px,
+	big: 14px
 );
 $h1-font-sizes: (
-  null  : 22px,
-  smallest: 22px,
-  small :24px,
-  medium: 28px,
-  large : 28px,
-  larger : 30px,
-  main: 28px,
-  big: 34px
+	null  : 22px,
+	smallest: 22px,
+	small :24px,
+	medium: 28px,
+	large : 28px,
+	larger : 30px,
+	main: 28px,
+	big: 34px
 );
 $h2-font-sizes: (
-  null  : 20px,
-  smallest: 20px,
-  small : 20px,
-  medium: 22px,
-  large : 24px,
-  larger : 26px,
-  main:28px,
-  big: 32px
+	null  : 20px,
+	smallest: 20px,
+	small : 20px,
+	medium: 22px,
+	large : 24px,
+	larger : 26px,
+	main:28px,
+	big: 32px
 );
 $h3-font-sizes: (
-  null  : 20px,
-  smallest: 20px,
-  small : 20px,
-  medium: 22px,
-  large : 22px,
-  larger : 22px,
-  main:22px,
-  big: 24px
+	null  : 12px,
+	smallest: 14px,
+	small : 14px,
+	medium: 18px,
+	large : 22px,
+	larger : 22px,
+	main:22px,
+	big: 24px
 );
 $menu-font-sizes: (
-  null  : 24px,
-  smallest: 25px,
-  small : 26px,
-  medium: 28px,
-  large : 28px,
-  larger: 28px,
-  main: 30px,
-  big: 30px
+	null  : 20px,
+	smallest: 22px,
+	small : 24px,
+	medium: 26px,
+	large : 28px,
+	larger: 28px,
+	main: 30px,
+	big: 30px
 );
 $menu-btn-font-sizes: (
-  null  : 16px,
-  smallest: 16px,
-  small : 18px,
-  medium: 20px,
-  large : 36px,
-  larger: 20px,
-  main: 20px,
-  big: 20px
+	null  : 16px,
+	smallest: 16px,
+	small : 18px,
+	medium: 20px,
+	large : 36px,
+	larger: 20px,
+	main: 20px,
+	big: 20px
 );

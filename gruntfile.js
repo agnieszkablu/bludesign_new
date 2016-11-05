@@ -22,13 +22,9 @@ module.exports = function( grunt ) {
 			}
 		}, //end imagemin
 		concat: {
-			options: {
-				banner: '<%= banner %>'
-			},
 			dist: {
 				src: [
-					'js/navigation.js',
-					'js/script.js'									
+					'js/*.js'								
 				],
 				dest: 'dist/js/script.js'
 			}
@@ -40,8 +36,10 @@ module.exports = function( grunt ) {
 				report: 'min'
 			},
 			dist: {
-				src: '<%= concat.dist.dest %>',
-				dest: 'dist/js/script.min.js'
+				files: {
+		            'dist/js/script.min.js': '<%= concat.dist.dest %>',
+		            'dist/js/todo.min.js': 'js/apps/todo.js'
+		        }
 			}
 		},
 
@@ -90,7 +88,7 @@ module.exports = function( grunt ) {
 		browserSync : {
 			dev : {
 				bsFiles : {
-					src : ['dist/css/*.css', 'img/*.*', 'dist/js/script.min.js', '*.php', 'inc/*.php', '!.sass-cache']
+					src : ['dist/css/*.css', 'img/*.*', 'dist/js/script.min.js', '*.php', 'inc/*.php', 'apps/*.html','!.sass-cache']
 				},
 				options: {
                     watchTask: true,
@@ -112,7 +110,6 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
 	grunt.loadNpmTasks( 'grunt-contrib-sass' );
 	grunt.loadNpmTasks('grunt-postcss');
-	grunt.loadNpmTasks( 'grunt-banner' );
 	grunt.loadNpmTasks( 'grunt-text-replace' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-contrib-imagemin' );
