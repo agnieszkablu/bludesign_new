@@ -4,11 +4,11 @@ module.exports = function( grunt ) {
 		pkg: grunt.file.readJSON( 'package.json' ),
 		clean: {
 			scripts: [
-				'dist/script.js',
-				'dist/script.min.js'
+				'dist/js/script.js',
+				'dist/js/script.min.js'
 			],
 			stylesheets: [
-				'style.css'
+				'dist/css/style.css'
 			]
 		},
 		imagemin : {
@@ -37,8 +37,7 @@ module.exports = function( grunt ) {
 			},
 			dist: {
 				files: {
-		            'dist/js/script.min.js': '<%= concat.dist.dest %>',
-		            'dist/js/todo.min.js': 'js/apps/todo.js'
+		            'dist/js/script.min.js': '<%= concat.dist.dest %>'
 		        }
 			}
 		},
@@ -51,20 +50,18 @@ module.exports = function( grunt ) {
 			}
 		}, //end of sass
 		postcss: {
-            options: {
-                map: {inline: false, // save all sourcemaps as separate files...
+      options: {
+          map: {inline: false, // save all sourcemaps as separate files...
 				},
-                processors: [
-                   require('autoprefixer')(), // add vendor prefixes
-        		   require('cssnano')() // minify the result
-                ]
-            },
-            dist: {
-                src: 'dist/css/style.css'
-            }
-        },
-
-	
+        processors: [
+          require('autoprefixer')(), // add vendor prefixes
+		   		require('cssnano')() // minify the result
+        ]
+      },
+        dist: {
+            src: 'dist/css/style.css'
+        }
+    },
 		watch: {
 			scripts: {
 				files: ['js/*.js'],
@@ -88,7 +85,7 @@ module.exports = function( grunt ) {
 		browserSync : {
 			dev : {
 				bsFiles : {
-					src : ['dist/css/*.css', 'img/*.*', 'dist/js/script.min.js', '*.php', 'inc/*.php', 'apps/*.html','!.sass-cache']
+					src : ['dist/css/*.css', 'img/*.*', 'dist/js/script.min.js', '*.php', 'inc/*.php','!.sass-cache']
 				},
 				options: {
                     watchTask: true,

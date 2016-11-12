@@ -1,10 +1,8 @@
 //jQuery
-jQuery(document).ready(function($) {
-		
+jQuery(document).ready(function($) {	
 	/*
 	============ Scroll functions ===========
 	*/
-	
 	$( window ).scroll( function (){
 
 		//Check to see if the window is top if not then display button
