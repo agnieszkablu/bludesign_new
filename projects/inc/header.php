@@ -13,13 +13,13 @@
 	<meta name="rating" content="general" /> 
 	<meta name="revisit-after" content="2 days" />
 	<title>bludesign.pl &#8211; webdesign</title>
-   	<base href="http://localhost/projekty/blu2/">
+    <base href="http://localhost/projekty/blu2/">
     <link href="dist/css/style.css" rel="stylesheet">
 	<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 </head>
-<body id="page" class="<?php echo $page ?>">
+<body id="page" class="<?php echo $page ?> project-show-case">
 	<header id="page-header" class="site-header container">
 		<button id="main-toggle" class="toggle-nav" aria-controls="main-nav" aria-expanded="false">
 			<span class="sr-only">Toggle navigation</span>
@@ -29,23 +29,20 @@
 		</button>
 		<nav id="site-navigation" class="main-nav">
 				<div class="main-nav__header">
-					<a class="brand" href="#page"><img class="img-responsive" src="dist/img/blu-white.png" alt="Logo image bludesign.pl"></a>
+					<a class="brand" href="#page"><img class="img-responsive" src="../dist/img/blu-white.png" alt="Logo image bludesign.pl"></a>
 				</div>
 				<ul class="nav">
 					<li class="nav-item scrollTo">
-						<a href="#page">Home</a>
-					</li>
-					<li class="nav-item scrollTo visible-home">
-						<a href="#services">Usługi</a>
-					</li>
-					<li class="nav-item scrollTo visible-home">
-						<a href="#projects">Realizacje</a>
+						<a href="/portfolio.php">Home</a>
 					</li>
 					<li class="nav-item scrollTo home-hidden">
 						<a href="#contact">Contact</a>
 					</li>
+					<li class="nav-item scrollTo home-hidden">
+						<a href="/resume.php/">Résumé</a>
+					</li>
 					<li  class="nav-item">
-						<a href="http://bludesign.pl/blog/">Blog</a>
+						<a href="http://bludesign.pl/blog">Blog</a>
 					</li>
 				</ul>
 				<ul class="nav-social">

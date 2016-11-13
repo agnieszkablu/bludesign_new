@@ -6,7 +6,10 @@
 # portfolio styles
 --------------------------------------------------------------*/
 @import "portfolio";
-
+/*--------------------------------------------------------------
+# Resume styles
+--------------------------------------------------------------*/
+@import "show-case";
 /*
 ============ Main styles ===========
 */
@@ -24,23 +27,6 @@
 .aligncenter{
 	display: block;
     margin: 0 auto;
-}
-.row{
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-}
-.col-6{
-	flex: 1;
-	flex-basis: 100%;
-	padding-left: 15px;
-	padding-right: 15px;
-}
-.col-3{
-	flex: 1;
-	flex-basis: 100%;
-	padding-left: 15px;
-	padding-right: 15px;
 }
 .visible-xs{
 	display: block;

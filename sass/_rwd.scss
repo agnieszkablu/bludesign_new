@@ -19,11 +19,21 @@
 	.hidden-xs{
 		display: block;
 	}
+	.row{
+		display: flex;
+		flex-direction: row;
+	}
 	.col-6{
-		flex-basis: calc(100% / 2);
+		flex: 1;
+		flex-basis: calc(100%/2);
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 	.col-3{
-		flex-basis: calc(100% / 3);
+		flex: 1;
+		flex-basis: calc(100%/3);
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 	.site-main{
 		padding: 50px;
@@ -78,8 +88,7 @@
 			}
 			img{
 				filter: grayscale(100%);
-				transform: scale(1);
-				transition: filter .3s ease-in-out, transform .5s ease-in-out;
+				transition: filter .3s ease-in-out;
 				transition-delay: .1s;
 			}
 			&:hover{
@@ -98,7 +107,6 @@
 				}
 				img{
 					filter: grayscale(0%);
-					transform: scale(1.002);	
 				}
 			}
 		}

@@ -11,7 +11,7 @@
 	label{
 		order: 1;
 		width: 4em;
-        text-align: center;
+    text-align: center;
 		padding-right: 0.5em;
 		white-space: nowrap;
 		user-select: none;
@@ -44,10 +44,18 @@
 			opacity: 0;
 		}
 	}
-	div.wpcf7-validation-errors{
-		text-align: center;
-	}
 	textarea{
 		height: 3em;
 	}
+}
+//Errors
+.error{
+  color: red;	
+  font-size: 12px;
+	margin-top: 5px;
+	margin-bottom: 0;
+}
+.inputTxtError {
+   border-color: #ff0000;
+   color: #0e0e0e;
 }

@@ -82,7 +82,7 @@
 	display: inline-block;
     position: absolute;
     top: 5%;
-    right: 5%;
+    right: 15%;
 	z-index: 99999;
 	border: 0;
 	box-shadow: none;
@@ -90,6 +90,7 @@
 	outline: transparent;
 	transition: transform 0.5s;
 }
+
 .toggle__bar{
 	display: block;
 	width: 30px;
@@ -156,6 +157,17 @@
 		background-size: auto;
 		ul.nav {
 			margin-top: 25%;
+		}
+	}
+}
+@media screen and (min-width: 1400px){
+	//project showcase page move menu toggle button more to the right
+	.project-show-case{
+		.toggle-nav{
+			right: 25%;
+			&.menu-toggle--fixed{
+				right: 15%;
+			}
 		}
 	}
 }

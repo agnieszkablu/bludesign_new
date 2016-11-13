@@ -1,7 +1,7 @@
 <?php require('inc/header.php'); ?>
 	<main id="main" class="site-main" role="main">
 		<section class="hero-header container rellax" data-rellax-speed="-7">
-			<h1 class="hero__txt">Coding <span class="hero__amp">&amp;</span> Design <small>bludesign.pl</small></h1>
+			<h1 class="hero__txt">Coding <span class="hero__amp">&amp;</span> Design <small>Agnieszka Gorz</small></h1>
 		</section><!-- .hero-header-->
 		<section class="page-portfolio main-content">
 			<div class="container">
@@ -11,58 +11,76 @@
 				</header><!-- .section-header-->
 				<article id="portfolio-projects" class="projects">
 					<div class="projects__container">
-						<figure>
-							<a href="/hart-media/">
+					<figure class="projects-figure">
+							<a href="/projects/blu.php/">
+								<img src="dist/img/projects/blux500.png" alt="Design and coding, marketing agency">
+							</a>
+							<figcaption>
+								<p>Design and coding for a marketing agency</p>
+								<a class="projects__readMore" href="/projects/blu.php">Learn more</a>
+							</figcaption>
+						</figure>
+						<figure class="projects-figure">
+							<a href="/projects/blog.php/">
 								<img src="dist/img/projects/hartx500.png" alt="Design and coding, marketing agency">
 							</a>
 							<figcaption>
 								<p>Design and coding for a marketing agency</p>
-								<a class="projects__readMore" href="/hart-media/">Learn more</a>
+								<a class="projects__readMore" href="/projects/blog.php">Learn more</a>
 							</figcaption>
 						</figure>
-						<figure>
-							<a href="/eurotrotter/">
+						<figure class="projects-figure">
+							<a href="/projects/hart-media.php">
+								<img src="dist/img/projects/hartx500.png" alt="Design and coding, marketing agency">
+							</a>
+							<figcaption>
+								<p>Design and coding for a marketing agency</p>
+								<a class="projects__readMore" href="/projects/hart-media.php">Learn more</a>
+							</figcaption>
+						</figure>
+						<figure class="projects-figure">
+							<a href="/projects/eurotrotter.php">
 								<img src="dist/img/projects/eurotx500.png" alt="Design and coding, webpage for travellers, eurotrotter.eu">
 							</a>
 							<figcaption>
 								<p>Design and coding, eurotrotter.eu</p>
-								<a class="projects__readMore" href="/eurotrotter/">Learn more</a>
+								<a class="projects__readMore" href="/projects/eurotrotter.php">Learn more</a>
 							</figcaption>
 						</figure>
-						<figure>
-							<a href="/uvdruk/">
+						<figure class="projects-figure">
+							<a href="/projects/uvdruk.php">
 								<img src="dist/img/projects/uvx500.png" alt="Design and coding, printing office, uvdruk.com">
 							</a>
 							<figcaption>
 								<p>Design and coding, printing office, uvdruk.com</p>
-								<a class="projects__readMore" href="/uvdruk/">Learn more</a>
+								<a class="projects__readMore" href="/projects/uvdruk.php">Learn more</a>
 							</figcaption>
 						</figure>
-						<figure>
-							<a href="/sklep-dojazdowa/">
+						<figure class="projects-figure">
+							<a href="/projects/sklep-dojazdowa.php">
 								<img src="dist/img/projects/sony-sklepx500.png"  alt="Design and coding, Woocommerce shop, dojazdowa.pl">
 							</a>
 							<figcaption>
 								<p>Design and coding, Woocommerce shop, dojazdowa.pl</p>
-								<a class="projects__readMore" href="/sklep-dojazdowa/">Learn more</a>
+								<a class="projects__readMore" href="/projects/sklep-dojazdowa.php">Learn more</a>
 							</figcaption>
 						</figure>
-						<figure>
-							<a href="/sony-centre/">
+						<figure class="projects-figure">
+							<a href="/projects/sony-centre.php">
 								<img src="dist/img/projects/sonyx500.png" alt="Design and coding, products presentation page, dojazdowa.pl">
 							</a>
 							<figcaption>
 								<p>Design and coding, products presentation page, dojazdowa.pl</p>
-								<a class="projects__readMore" href="/sony-centre/">Learn more</a>
+								<a class="projects__readMore" href="/projects/sony-centre.php">Learn more</a>
 							</figcaption>
 						</figure>
-						<figure>
-							<a href="/peanutbutter/">
+						<figure class="projects-figure">
+							<a href="/projects/peanutbutter.php">
 								<img src="dist/img/projects/peanutx500.png" alt="Design and coding, peanut butter manufacturer">
 							</a>
 							<figcaption>
 								<p>Design and coding, peanut butter manufacturer</p>
-								<a class="projects__readMore" href="/peanutbutter/">Learn more</a>
+								<a class="projects__readMore" href="/projects/peanutbutter.php">Learn more</a>
 							</figcaption>
 						</figure>
 					</div><!-- .projects-container -->
