@@ -35,7 +35,6 @@ jQuery(document).ready(function($) {
 	============ CV skills set ===========
 	*/
 
-
 	var tableCells = $( '.skill-bullet' ),
 		tableCellsData;
 	tableCells.each( function () {

@@ -2,7 +2,7 @@ var data = {};
 $(document).ready(function() {
 	$('input[type="submit"]').on('click', function() {
 			resetErrors();
-			var url = '../form/form.php';
+			var url = '../form/form2.php';
 			$.each($('form input'), function(i, v) {
 					if (v.type !== 'submit') {
 							data[v.name] = v.value;

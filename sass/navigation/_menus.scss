@@ -161,8 +161,9 @@
 	}
 }
 @media screen and (min-width: 1400px){
-	//project showcase page move menu toggle button more to the right
-	.project-show-case{
+	//project showcase page, and resume page move menu toggle button more to the right
+	.project-show-case,
+	.resume{
 		.toggle-nav{
 			right: 25%;
 			&.menu-toggle--fixed{

@@ -9,9 +9,18 @@
 			</section>
 			<section class="main-content cv">
 				<article class="cv__header">
-					<h2>Agnieszka Górz</h2>
+					<h2 class="content__heading">Agnieszka Górz</h2>
 					<h3>Freelance webdeveloper</h3>
-					<p>Hey! I am Agnieszka Górz, I am a freelance webdeveloper, self-tought and self-employed, and looking for chance to enhance my skills and boost my progress.   </p>
+					<p>Hey! I am Agnieszka Górz a freelance webdeveloper. Self-taught and self-employed, and looking for a chance to enhance my skills and boost my progress. Right now I am aiming for a job as a junior forntend developer. Most willingly in the team focused on employees growth and work-life balance culture.</p>
+					<p>For the past 1.5 year I was working remotely in coopperation with German based firm, and during that time I developed several projects. Those projects were focused on developing a fully functional Wordpress webpage from PSD design.
+					Moreover as a freelancer I have also created a couple of projects for my own clients (some of those projects can be found on my <a href="https://github.com/agnieszkablu">GitHub account</a>).</p>
+					<p>As a person who is focused on progress and constant learning I would love to join a company where I could learn especially:</p>
+					<ul>
+						<li>JavaScript and jQuery</li>
+						<li>AngularJS or/and ReactJS</li>
+						<li>Code optimisation and best practices</li>
+					</ul>
+					<p>My past experience as a sales specialist and manager and my field of study provided me with good communication and teamwork skills.</p>
 				</article>
 				<article class="cv__timeline">
 					<ul>
@@ -30,12 +39,12 @@
 									<span class="lighter">Self-employed</span>
 								</li>
 								<li>
-									Manager at Simple-CP boutique [ <span class="lighter">Nov 2013 - Feb 2015</span> ]<br>
-									<span class="lighter">Simple Sp. z o.o., Trzy Korony, Nowy Sącz</span>
+									Manager at Simple-CP [ <span class="lighter">Nov 2013 - Feb 2015</span> ]<br>
+									<span class="lighter">Premium brand boutique - Simple Sp. z o.o., Trzy Korony, Nowy Sącz</span>
 								</li>
 								<li>
-									Sales specialist  [ <span class="lighter">June 2011 - nov 2012</span> ]<br>
-									<span class="lighter">P.U.H. Auto-Complex Sp. z o.o., Nowy Sącz</span>
+									Sales specialist [ <span class="lighter">June 2011 - nov 2012</span> ]<br>
+									<span class="lighter">Car dealership - P.U.H. Auto-Complex Sp. z o.o., Nowy Sącz</span>
 								</li>
 							</ul>
 						</div>
@@ -52,18 +61,22 @@
 								</tr>
 								<tr>
 									<th>E-mail</th>
-									<td><a href="mailto:agnieszka.gorz@outlook.com">agnieszka.gorz@outlook.com</a></td>
+									<td><a href="mailto:au.gorz@gmail.com">au.gorz@gmail.com</a></td>
 								</tr>
 								<tr>
 									<th>Address</th>
 									<td>Gołkowice Dolne 16, 33-388 Gołkowice, Poland</td>
+								</tr>
+								<tr>
+									<th></th>
+									<td>Mina Kruesemanstraat 5, 1506WN Zaandam, Netherlands</td>
 								</tr>
 							</table>
 						</div>
 					</div>
 					<div class="row">
 						<div class="cv__skill1 col-3">
-							<h4 class="cv__block-heading">Proficiency Skill</h4>
+							<h4 class="cv__block-heading">Frameworks and programs</h4>
 							<table>
 								<tr>
 									<th>Twitter Bootstrap</th>
@@ -75,7 +88,7 @@
 								</tr>
 								<tr>
 									<th>Wordpress</th>
-									<td class="skill-bullet" data-skillSet="3"></td>
+									<td class="skill-bullet" data-skillSet="2"></td>
 								</tr>
 								<tr>
 									<th>Woocommerce</th>
@@ -97,15 +110,15 @@
 							</table>
 						</div>
 						<div class="cv__skill2 col-3">
-							<h4 class="cv__block-heading">Professional Skill</h4>
+							<h4 class="cv__block-heading">Languages and libriaries</h4>
 							<table>
 								<tr>
 									<th>Html5</th>
-									<td class="skill-bullet" data-skillSet="4"></td>
+									<td class="skill-bullet" data-skillSet="3"></td>
 								</tr>
 								<tr>
 									<th>Css3</th>
-									<td class="skill-bullet" data-skillSet="4"></td>
+									<td class="skill-bullet" data-skillSet="3"></td>
 								</tr>
 								<tr>
 									<th>Sass</th>
@@ -126,15 +139,15 @@
 							</table>
 						</div>
 						<div class="cv__skill3 col-3">
-							<h4 class="cv__block-heading">Personal Skill</h4>
+							<h4 class="cv__block-heading">Personal Skills</h4>
 							<table>
 								<tr>
-									<th>TeamWork</th>
+									<th>Teamwork</th>
 									<td class="skill-bullet" data-skillSet="4"></td>
 								</tr>
 								<tr>
 									<th>Communication skills</th>
-									<td class="skill-bullet" data-skillSet="5"></td>
+									<td class="skill-bullet" data-skillSet="4"></td>
 								</tr>
 								<tr>
 									<th>English</th>
@@ -142,8 +155,8 @@
 								</tr>
 							</table>
 						</div>
-						<div class="lighter"><small>*These subjective values are visual representation of competencies proficiency scale which is organized in five steps; from “Fundamental Awareness” to “Expert”.</small></div>
-					</div> <!-- .row -->
+						</div> <!-- .row -->
+					<div class="lighter"><small>*These subjective values are visual representation of competencies proficiency scale which is organized in five steps - from “Fundamental Awareness” to “Expert”.</small></div>
 					<div class="cv__hobby">
 						<h4 class="cv__block-heading">Passions &amp; Hobbies</h4>
 						<ul>

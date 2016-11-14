@@ -2,10 +2,9 @@
 	<div class="container">
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main" role="main">
-				<section class="hero-header container rellax" data-rellax-speed="-7">
-					<h1 class="hero__txt " >
-					Coding <span class="hero__amp">&amp;</span> Design <small>bludesign.pl</small></h1>
-				</section>
+			
+				<?php require('inc/section-header.php'); ?>
+				
 				<section class="page-show-case main-content">
 					<header>
 						<h2 class="content__heading">peanutbutterprivatelabel.com</h2>
@@ -23,7 +22,7 @@
 							<ul>
 								<li>developed with html5, sass and PHP</li>
 								<li>project uses bootstrap and jquery as dependencies</li>
-								<li>graphics design based on clients materials</li>
+								<li>graphic design based on clients materials</li>
 								<li>uses maps.google API</li>
 							</ul>
 						</div><!-- .col-6 -->

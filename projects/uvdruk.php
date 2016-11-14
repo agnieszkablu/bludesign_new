@@ -2,10 +2,9 @@
 	<div class="container">
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main" role="main">
-				<section class="hero-header container rellax" data-rellax-speed="-7">
-					<h1 class="hero__txt " >
-					Coding <span class="hero__amp">&amp;</span> Design <small>bludesign.pl</small></h1>
-				</section>
+			
+				<?php require('inc/section-header.php'); ?>
+				
 				<section class="page-show-case main-content">
 					<header>
 						<h2 class="content__heading">UV druk</h2>
@@ -23,7 +22,7 @@
 							<ul>
 								<li>developed with Wordpress (custom theme based on <a href="https://github.com/agnieszkablu/wp_basic">my basic theme boilerplate</a> on GitHub)</li>
 								<li>project uses bootstrap and jquery as dependencies</li>
-								<li>graphics design based on clients materials</li>
+								<li>graphic design based on clients materials</li>
 							</ul>
 						</div><!-- .col-6 -->
 					</div><!-- .row -->

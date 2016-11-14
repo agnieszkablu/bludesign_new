@@ -12,7 +12,7 @@
 			</ul>
 			<div class="site-footer__address">
 				<address class="visible-home">Email: <a href="mailto:kontakt@bludesign.pl">kontakt@bludesign.pl</a><br>Tel: <a href="tel:+48733029979">+48 733 029 979</a></address>
-				<address class="hidden-home">Email: <a href="mailto:agnieszka.gorz@outlook.com">agnieszka.gorz@outlook.com</a><br>Skype chat: <a href="skype:agnieszka.gorz?chat">agnieszka.gorz</a></address>
+				<address class="hidden-home">Email: <a href="mailto:au.gorz@gmail.com">au.gorz@gmail.com</a><br>Skype chat: <a href="skype:agnieszka.gorz?chat">agnieszka.gorz</a></address>
 			</div><!-- .site-footer__address -->
 			<div class="site-footer__design">
 				<p>MADE with <span class="icon icon-heart"></span> by <a href="http://bludesign.pl/" target="_blank">bludesign.pl</a> 2016 &copy;</p>
@@ -26,6 +26,7 @@
 	<script  src="https://code.jquery.com/jquery-3.1.1.min.js"
 		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
 		crossorigin="anonymous"></script>
+	<script src="inc/form/js/form2.js"></script>
 	<script src="dist/js/visible.min.js"></script>
 	<script src="dist/js/script.min.js"></script>
 </body>

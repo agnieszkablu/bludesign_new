@@ -2,10 +2,9 @@
 	<div class="container">
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main" role="main">
-				<section class="hero-header container rellax" data-rellax-speed="-7">
-					<h1 class="hero__txt " >
-					Coding <span class="hero__amp">&amp;</span> Design <small>Agnieszka Gorz</small></h1>
-				</section>
+				
+				<?php require('inc/section-header.php'); ?>
+					
 				<section class="page-show-case main-content">
 					<header>
 						<h2 class="content__heading">bludesign.pl</h2>
@@ -13,17 +12,19 @@
 					<div class="row">
 						<div class="col-6">
 							<a href="http://bludesign.pl/">
-								<img src="dist/img/projects/uv-ipad.jpg" alt="Design and coding, webdesign agency, bludesign.pl">
+								<img src="dist/img/projects/blu-ipad.jpg" alt="Design and coding, webdesign agency, bludesign.pl">
 							</a>
 						</div><!-- .col-6 -->
 						<div class="col-6">
-							<h2>Webpage for printing office - UV druk</h2>
-							<p><a href="http://bludesign.pl/">bludesign.pl</a> is a standard site with different subpages for every aspect of clients' creative work.</p>
+							<h2>bludesign.pl - webdeveloper homepage</h2>
+							<p><a href="http://bludesign.pl/">bludesign.pl</a> is aplace where potential clients can meet my work and discover my the opportunities</p>
 							<h3>Main features:</h3>
 							<ul>
-								<li>developed with Wordpress (custom theme based on <a href="https://github.com/agnieszkablu/wp_basic">my basic theme boilerplate</a> on GitHub)</li>
-								<li>project uses bootstrap and jquery as dependencies</li>
-								<li>graphics design based on clients materials</li>
+								<li>developed with plain Html5, Css3 and Sass, JavaScript and jQuery, and a bit of PHP</li>
+								<li>icons from <a href="http://icomoon.io">icomoon.io</a></li>
+								<li>colors and styles based on Google's material design</li>
+								<li>Grunt used for compiling sass files, minifying, adding prefixes and browsersync.</li>
+								<li><a href="https://github.com/agnieszkablu/bludesign_new">GitHub repository</a></li>
 							</ul>
 						</div><!-- .col-6 -->
 					</div><!-- .row -->

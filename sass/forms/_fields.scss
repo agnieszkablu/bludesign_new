@@ -56,6 +56,17 @@
 	margin-bottom: 0;
 }
 .inputTxtError {
-   border-color: #ff0000;
+   border-bottom: #ff0000 1px solid !important;
    color: #0e0e0e;
+}
+.form__response-output{
+	  text-align: center;
+    margin: 45px auto 0px;
+    font-size: 1.5em;
+    &.form-error{
+    	color: red;
+    }
+    &.form-success{
+    	color: green;
+    }
 }

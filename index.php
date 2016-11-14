@@ -140,18 +140,21 @@
 					<h2 class="content__heading">Formularz kontaktowy</h2>
 				</header>
 				<div class="form-container">
-					<form id="contactForm" method="post" class="form">
+					<form id="contactForm" action="inc/form/form2.php" method="post" class="form">
 						<div class="input-container">
-							<input type="text" name="your-name" value="" size="40" class="" id="your-name" aria-required="true" aria-invalid="false" placeholder="* Imię i nazwisko" required >
+							<input type="text" name="your-name" value="" size="40" class="" id="your-name" aria-required="true" aria-invalid="false" placeholder="* Imię i nazwisko"  >
 							<label class="icon-profile-male" for="your-name"></label>
+							<div id="nameError" class="error hidden">To pole jest wymagane</div>
 						</div>
 						<div class="input-container">
-							<input type="email" name="your-email" value="" size="40" class="" id="your-email" aria-required="true" aria-invalid="false" placeholder="* Email" required >
+							<input type="email" name="your-email" value="" size="40" class="" id="your-email" aria-required="true" aria-invalid="false" placeholder="* Email"  >
 							<label for="your-email" class="icon-envelope2"></label>
+							<div id="emailError" class="error hidden">To pole jest wymagane i musi zawierać adres e-mail</div>
 						</div>
 						<div class="input-container">
-							<textarea name="your-message" cols="40" rows="10" class="" id="your-message" aria-invalid="false" placeholder="* Wiadomość" required ></textarea>
+							<textarea name="your-message" cols="40" rows="10" class="" id="your-message" aria-invalid="false" placeholder="* Wiadomość"  ></textarea>
 							<label for="your-message" class="icon-quote"></label>
+							<div id="msgError" class="error hidden">To pole jest wymagane</div>
 						</div>
 						<input type="submit" value="Wyślij" class="submit" />
 						<div id="response-output" class="form__response-output hidden"></div>

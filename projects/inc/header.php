@@ -29,7 +29,7 @@
 		</button>
 		<nav id="site-navigation" class="main-nav">
 				<div class="main-nav__header">
-					<a class="brand" href="#page"><img class="img-responsive" src="../dist/img/blu-white.png" alt="Logo image bludesign.pl"></a>
+					<a class="brand" href="#page"><img class="img-responsive" src="dist/img/blu-white.png" alt="Logo image bludesign.pl"></a>
 				</div>
 				<ul class="nav">
 					<li class="nav-item scrollTo">
